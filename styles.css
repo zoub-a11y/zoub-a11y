@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(97, 97, 97);
+    background-color: #0C1A35;
 }
 
 
@@ -35,8 +35,8 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;    
-} 
+    text-align: center;
+}
 
 .presentation-contenu-col1 {
     width: 50%;
@@ -67,41 +67,70 @@ body {
     margin-right: auto;
 }
 
+.btnHaut {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 25px;
+}
+
 .btnShare {
-    position: relative;
-    margin-top: -60px;
-    margin-left: 230px;
+    cursor: pointer;
+    margin-left: 460px;
+    margin-top: 25px;
     width: 50px;
     height: 50px;
     text-align: center;
-    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 162px;
     background: #dde1e7;
     box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
 }
-.icons img {
-    padding: 0;
-}
 
 .btnShare:hover {
+    color: rgb(234, 1, 1);
     box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
 }
 
 .btnShare svg {
-    color: #0b0b0bce;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.btnAbo {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 290px;
+    margin-top: 28px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 162px;
+    background: #dde1e7;
+    box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
+}
+
+.btnAbo:hover {
+    color: rgb(234, 1, 1);
+    box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
 }
 
 .icons-contenu {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
+
 .icons {
     position: relative;
-    margin: 20px; 
+    margin: 20px;
     height: 90px;
     width: 90px;
     display: flex;
@@ -111,6 +140,7 @@ body {
     background: #dde1e7;
     box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
 }
+
 .icons img {
     padding: 0;
 }
@@ -120,14 +150,14 @@ body {
 }
 
 
-#links{
-   text-align: center;
-   margin-top: 25px;
-   margin-bottom: 25px;
+#links {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 #links a {
-    padding: 0;    
+    padding: 0;
 }
 
 #links a span {
@@ -135,21 +165,20 @@ body {
 }
 
 #links svg {
-    color: aliceblue;
+    color: rgb(255, 240, 240);
     margin-right: 20px;
 }
 
-.btn{
+.btn {
     margin-top: .5em;
     margin-bottom: .5em;
     line-height: 50px;
     height: 50px;
-    width:60%;
+    width: 60%;
     border-radius: 2em;
-    background-color:blue;
     text-decoration: none;
     text-align: center;
-    color: aliceblue; 
+    color: aliceblue;
 }
 
 .black {
@@ -158,14 +187,15 @@ body {
 }
 
 .black:hover {
-    background-color: #0C1A35;
+    background-color: #52687d;
     color: aliceblue;
 }
 
 .nightblue {
-    background-color: #0C1A35;
+    background-color: #52687d;
     transition: .3s ease-in;
 }
+
 .nightblue:hover {
     background-color: #000;
     color: aliceblue;
@@ -181,7 +211,7 @@ body {
     border-radius: 100%;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(210, 210, 210, 0.625) 0%, rgb(27, 25, 50) 81.3%);
     text-align: center;
-    box-shadow: #888; 
+    box-shadow: #888;
     transition: 400ms;
     /*temps de disparition du btn */
 }
@@ -232,26 +262,14 @@ body {
     }
 
     .btnShare {
-        position: relative;
-        margin-top: -60px;
-        margin-left: 200px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 162px;
-        background: #dde1e7;
-        box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;    
+        margin: auto;
+        margin-top: 10px;
     }
-    
-    .btnShare svg {
-        color: #0b0b0bce;
-    }
-    
-    .btnShare:hover {
-        box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
+
+    .btnAbo {
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 350px;
     }
 }
 
@@ -287,29 +305,6 @@ body {
         height: 90px;
         width: 90px;
     }
-
-    .btnShare {
-        position: relative;
-        margin-top: -50px;
-        margin-left: 50px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 162px;
-        background: #dde1e7;
-        box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;    
-    }
-
-    .btnShare svg {
-        color: #0b0b0bce;
-    }
-    
-    .btnShare:hover {
-        box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
-    }
 }
 
 @media screen and (max-width: 578px) {
@@ -317,29 +312,6 @@ body {
         height: 50px;
         width: 50px;
         margin: 5px;
-    }
-
-    .btnShare {
-        position: relative;
-        margin-top: -50px;
-        margin-left: 50px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 162px;
-        background: #dde1e7;
-        box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
-    }
-    
-    .btnShare svg {
-        color: #0b0b0bce;
-    }
-    
-    .btnShare:hover {
-        box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
     }
 }
 
@@ -351,40 +323,36 @@ body {
     .presentation {
         width: 100%;
     }
+    
+    .btnHaut {
+        margin-top: 90px;
+    }
 
     .btnShare {
-        position: relative;
-        margin-top: 20px;
-        margin-left: 60px;
-        margin-bottom: -20px;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 162px;
-        background: #dde1e7;
-        box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
+        margin-left: 30px;
+        margin-top: 5px;
     }
-    
-    .btnShare svg {
-        color: #0b0b0bce;
-    }
-    
-    .btnShare:hover {
-        box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
+
+    .btnAbo {
+        margin-left: 110px;
     }
 }
 
 @media screen and (max-width: 240px) {
     #links span {
-        display:none;
-    }
-    #links svg {
-        text-align: center;
-        margin:0;
+        display: none;
     }
 
-    
+    #links svg {
+        text-align: center;
+        margin: 0;
+    }
+
+    .btnShare {
+        margin-left: 5px;
+    }
+
+    .btnAbo {
+        margin-left: 100px
+    }
 }
