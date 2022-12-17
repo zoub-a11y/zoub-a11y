@@ -13,3 +13,4 @@ Mes apparitions médiatiques :
 	- [Sur Facebook](https://fb.watch/a-6jlQ-d0Q/)
 	- [Sur Twitter](https://twitter.com/tanguydl/status/1129112679065542657?s=20&t=r-gBTlAe82xypLuk8ujraA)
 
+Vous pouvez aussi [me retrouver sur les réseaux via mon Linktree](https://zoub-a11y.github.io/zoub-a11y/){:target="_blank"} !
