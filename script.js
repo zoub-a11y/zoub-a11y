@@ -6,9 +6,22 @@ window.addEventListener("scroll", (e) => {
     btn.classList.remove("visible");
   }
 });
+
 function scrollhaut() {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+}
+
+async function addCurrentUrlToFavorites() {
+  // Récupère l'URL actuelle
+  var currentUrl = window.location.href;
+
+  try {
+    // Ajoute l'URL actuelle aux favoris
+    await navigator.bookmarks.create({title: document.title, url: currentUrl});
+  } catch (error) {
+    console.error(error);
+  }
 }

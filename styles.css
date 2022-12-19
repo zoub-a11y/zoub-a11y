@@ -93,6 +93,100 @@ body {
   box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
 }
 
+.modalSocial {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Couleur de fond de la modale */
+  background-color: rgba(0, 0, 0, 0.4); /* Opacité de la modale */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Marge autour du contenu de la modale */
+  padding: 30px;
+  border-radius: 20px;
+  width: 40%; /* Largeur du contenu de la modale */
+}
+
+/* Style titre de la modale */
+.modal-content h2 {
+  margin: 20px 0;
+}
+
+/* Style liste de la modale */
+.modal-content ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Style des liens de partage */
+.modal-content a {
+  display: block; /* Affiche chaque lien sur une nouvelle ligne */
+  margin-bottom: 10px; /* Marge en bas de chaque lien */
+  color: #333; /* Couleur du texte des liens */
+  text-decoration: none; /* Retire la décoration sous-jacente des liens */
+}
+
+/* Style des liens Facebook */
+.modal-content .facebook {
+  background-color: #3b5998;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.modal-content .facebook:hover {
+  background-color: #172366;
+}
+
+/* Style des liens Twitter */
+.modal-content .twitter {
+  background-color: #33ccff;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.modal-content .twitter:hover {
+  background-color: #00acee;
+}
+
+/* Style des liens LinkedIn */
+.modal-content .linkedin {
+  background-color: #00a0dc;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.modal-content .linkedin:hover {
+  background-color: #0077b5;
+}
+
+/* Style du bouton .close */
+.close {
+  position: absolute; /* Positionne le bouton en haut à droite de la modale */
+  right: 14px;
+  top: 0px;
+  background: transparent;
+  border: none;
+  font-size: 34px; /* Taille de la croix */
+  font-weight: bold; /* Gras */
+  color: #333; /* Couleur de la croix */
+  cursor: pointer; /* Curseur en forme de main lorsque le bouton est survolé */
+}
+
+.close:hover {
+  color: red;
+}
+
 .btnFav {
   order: 3;
   margin-top: 40px;
@@ -183,7 +277,7 @@ body {
 .black:focus {
   background-color: #000;
   color: aliceblue;
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .nightblue {
@@ -199,7 +293,7 @@ body {
 .nightblue:focus {
   background-color: #52687d;
   color: aliceblue;
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .scroll {
