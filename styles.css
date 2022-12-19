@@ -11,7 +11,7 @@ body {
 }
 
 .presentation {
-  height: 600px;
+  min-height: 600px;
   background-color: lightblue;
   padding-top: 80px;
 }
