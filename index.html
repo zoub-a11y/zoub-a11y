@@ -30,6 +30,12 @@
   </head>
   <body>
     <section class="btnHaut">
+      <div class="row row-dark-mode">
+          <label class="switch" aria-label="Activer le mode sombre" title="Activer le mode sombre">
+            <input type="checkbox" id="toggle-dark-mode">
+            <span class="slider"></span>
+          </label>
+      </div>
       <div class="row">
         <div class="col-6 col-sm-6 col-md-3 col-lg-3">
           <div
@@ -37,6 +43,8 @@
             aria-label="Partager"
             title="Partager"
             tabindex="0"
+            data-toggle="modal"
+            data-target=".modalSocial"
           >
             <?xml version="1.0" encoding="iso-8859-1"?>
             <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -69,24 +77,44 @@
             </svg>
           </div>
           <!-- Fenetre modale -->
-          <div class="modalSocial">
-            <div class="modal-content">
-              <!-- Titre de la modale -->
-              <h2>Partager sur les réseaux sociaux</h2>
-              <!-- Liens de partage -->
-              <ul>
-                <li><a href="#" class="facebook">Partager sur Facebook</a></li>
-                <li><a href="#" class="twitter">Partager sur Twitter</a></li>
-                <li><a href="#" class="linkedin">Partager sur LinkedIn</a></li>
-              </ul>
-              <button
-                class="close"
-                aria-label="Fermer la modale"
-                title="Fermer"
-                tabindex="0"
-              >
-                &times;
-              </button>
+          <div class="modalSocial" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <!-- Titre de la modale -->
+                <h2>Partager sur les réseaux sociaux</h2>
+                <!-- Liens de partage -->
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/sharer/sharer.php?u=https://zoub-a11y.github.io/zoub-a11y/"
+                      class="facebook"
+                      >Partager sur Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/intent/tweet?url=https://zoub-a11y.github.io/zoub-a11y/&text=Zoubeir_Haffez&via=VOTRE_NOM_D%27UTILISATEUR"
+                      class="twitter"
+                      >Partager sur Twitter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/shareArticle?mini=true&url=https://zoub-a11y.github.io/zoub-a11y/&title=Zoubeir_Haffez&summary=Defenseur_de_l%27accessibilite&source=URL_DU_SITE"
+                      class="linkedin"
+                      >Partager sur LinkedIn</a
+                    >
+                  </li>
+                </ul>
+                <button
+                  class="close"
+                  aria-label="Fermer la modale"
+                  title="Fermer"
+                  tabindex="0"
+                >
+                  &times;
+                </button>
+              </div>
             </div>
           </div>
           <!-- fin fenetre modale -->
@@ -202,10 +230,20 @@
             forme d’interventions, d'ateliers et la mise en place de "Bilans"
             auprès des différents acteurs du secteur.
           </p>
+        </div>
+        <div class="presentation-contenu-col2">
+          <img
+            src="images/ZoubeirLogoV.png"
+            alt="Photo-du-propriétaire-de-ce-Linktree"
+          />
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-12">
           <div class="icons-contenu">
             <a
-              class="icons"
+              class="icons Linkedin"
               target="_blank"
               href="https://www.linkedin.com/in/zoubeirhaffez/"
               title="zoubeirhaffez"
@@ -213,7 +251,7 @@
             /></a>
 
             <a
-              class="icons"
+              class="icons Facebook"
               target="_blank"
               href="https://www.facebook.com/zoubeir.haffez"
               title="zoubeir.haffez"
@@ -221,7 +259,7 @@
             /></a>
 
             <a
-              class="icons"
+              class="icons Insta"
               target="_blank"
               href="https://www.instagram.com/zoubeir.haffez/"
               title="zoubeir.haffez"
@@ -229,19 +267,13 @@
             /></a>
 
             <a
-              class="icons"
+              class="icons Twitter"
               target="_blank"
               href="https://twitter.com/ZoubeirH"
               title="ZoubeirH"
               ><img src="pictos/twitter.svg" alt="icone-Twitter"
             /></a>
           </div>
-        </div>
-        <div class="presentation-contenu-col2">
-          <img
-            src="images/ZoubeirLogoV.png"
-            alt="Photo-du-propriétaire-de-ce-Linktree"
-          />
         </div>
       </div>
     </section>
@@ -446,33 +478,18 @@
         
         <a href="" class="btn black"></a> -->
     </div>
-    <div id="btn" class="scroll" aria-label="Remonter vers le haut de la page" title="Vers le haut" tabindex="0" onclick="scrollhaut();">
+    <div
+      id="btn"
+      class="scroll"
+      aria-label="Remonter vers le haut de la page"
+      title="Vers le haut"
+      tabindex="0"
+      onclick="scrollhaut();"
+    >
       <img
-        src="https://cdn.discordapp.com/attachments/992442990767390724/1034392538141949982/unknown.png"
+        src="pictos/up.png"
         alt="flèche haut de page"
       />
     </div>
-    <script>
-      var closeBtn = document.querySelector(".close");
-      const modalSocial = document.querySelector(".modalSocial");
-      const btnShare = document.querySelector(".btnShare");
-
-      // Ouvrir la modale à l'aide du bouton ".btnShare"
-      btnShare.addEventListener("click", function () {
-        modalSocial.style.display = "block";
-      });
-
-      // fermer la modale quand l'utilisateur clique en dehors
-      window.addEventListener("click", function (event) {
-        if (event.target == modalSocial) {
-          modalSocial.style.display = "none";
-        }
-      });
-
-      // fermer la modale lorsque l'utilisateur clique sur la croix
-      closeBtn.addEventListener("click", function () {
-        modalSocial.style.display = "none";
-      });
-    </script>
   </body>
 </html>
