@@ -23,6 +23,8 @@ body {
 
 .dark-mode-presentation {
   background-color: rgb(65, 74, 75);
+  -webkit-transition: .4s;
+  transition: .4s;
   color: #fff;
   min-height: 600px;
   padding-top: 80px;
@@ -30,6 +32,8 @@ body {
 
 .dark-mode-btnHaut {
   background-color: rgb(65, 74, 75);
+  -webkit-transition: .4s;
+  transition: .4s;
   color: #fff;
   height: 90px;
 }
@@ -38,6 +42,7 @@ body {
 .switch {
   position: relative;
   display: inline-block;
+  margin-right: 10px;
   width: 60px;
   height: 34px;
   border-radius: 34px;
@@ -65,7 +70,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: rgb(43, 43, 43);
+  background-color: #fff;
 }
 
 input:focus + .slider {
@@ -76,6 +81,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: #000;
 }
 
 .slider:before {
@@ -94,6 +100,8 @@ input:checked + .slider:before {
 
 .presentation {
   min-height: 600px;
+  -webkit-transition: .4s;
+  transition: .4s;
   background-color: lightblue;
   padding-top: 80px;
 }
@@ -151,6 +159,8 @@ input:checked + .slider:before {
 
 .btnHaut {
   background: lightblue;
+  -webkit-transition: .4s;
+  transition: .4s;
   height: 90px;
   padding: 0;
   text-align: center;
@@ -250,6 +260,18 @@ input:checked + .slider:before {
 
 .modal-content .linkedin:hover {
   background-color: #0077b5;
+}
+
+#copyButton {
+  background: transparent;
+  border: 1px solid black;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#copyButton:hover {
+  background: #f7f7f7;
 }
 
 /* Style du bouton .close */
