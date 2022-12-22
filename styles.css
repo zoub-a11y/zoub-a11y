@@ -11,30 +11,29 @@ body {
 }
 
 .row-dark-mode {
-  float: right;
-  text-align: end;
-  padding: 20px;
+  justify-content: end;
+  padding: 20px 20px 0 0;
 }
 
 .dark-mode {
-  background-color: #222;
+  background-color: #222 !important;
   color: #fff !important;
 }
 
 .dark-mode-presentation {
-  background-color: rgb(65, 74, 75);
-  -webkit-transition: .4s;
-  transition: .4s;
-  color: #fff;
+  background-color: rgb(65, 74, 75) !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #fff !important;
   min-height: 600px;
   padding-top: 80px;
 }
 
 .dark-mode-btnHaut {
-  background-color: rgb(65, 74, 75);
-  -webkit-transition: .4s;
-  transition: .4s;
-  color: #fff;
+  background-color: rgb(65, 74, 75) !important;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #fff !important;
   height: 90px;
 }
 
@@ -64,8 +63,8 @@ body {
   right: 0;
   bottom: 0;
   background-color: #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -93,22 +92,24 @@ input:checked + .slider:before {
   bottom: 4px;
   background-color: #fff;
   border: 1px solid black;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 .presentation {
   min-height: 600px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   background-color: lightblue;
   padding-top: 80px;
 }
 
 .presentation-title {
   order: 0;
-  padding: 40px 0;
+  margin-top: 10px;
+  padding: 0 20px;
+  justify-content: center;
 }
 
 .presentation-title h1 {
@@ -159,8 +160,8 @@ input:checked + .slider:before {
 
 .btnHaut {
   background: lightblue;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   height: 90px;
   padding: 0;
   text-align: center;
@@ -168,7 +169,7 @@ input:checked + .slider:before {
 
 .btnShare {
   order: 1;
-  margin-top: 40px;
+  margin-top: 10px;
   cursor: pointer;
   padding: 15px;
   margin-left: auto;
@@ -180,9 +181,32 @@ input:checked + .slider:before {
   box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
 }
 
+.btnShare button {
+  background: transparent;
+  border: none;
+}
+
 .btnShare:hover {
   fill: rgb(234, 1, 1);
   box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
+}
+
+.btnShare img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.modalSocialDarkMode {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Couleur de fond de la modale */
+  background-color: rgba(0, 0, 0, 0.4); /* Opacité de la modale */
 }
 
 .modalSocial {
@@ -198,8 +222,20 @@ input:checked + .slider:before {
   background-color: rgba(0, 0, 0, 0.4); /* Opacité de la modale */
 }
 
+.modal-content-dark-mode {
+  position: relative;
+  background-color: rgb(78, 86, 88) !important;
+  text-align: center;
+  margin: 15% auto; /* Marge autour du contenu de la modale */
+  padding: 30px;
+  border-radius: 20px;
+  width: 40%; /* Largeur du contenu de la modale */
+}
+
 .modal-content {
+  position: relative;
   background-color: #fefefe;
+  text-align: center;
   margin: 15% auto; /* Marge autour du contenu de la modale */
   padding: 30px;
   border-radius: 20px;
@@ -209,17 +245,25 @@ input:checked + .slider:before {
 /* Style titre de la modale */
 .modal-content h2 {
   margin: 20px 0;
+  color: black;
+}
+
+.modal-content-dark-mode h2 {
+  margin: 20px 0;
+  color: white !important;
 }
 
 /* Style liste de la modale */
-.modal-content ul {
+.modal-content ul,
+.modal-content-dark-mode ul {
   margin: 20px 0;
   padding: 0;
   list-style-type: none;
 }
 
 /* Style des liens de partage */
-.modal-content a {
+.modal-content a,
+.modal-content-dark-mode a {
   display: block; /* Affiche chaque lien sur une nouvelle ligne */
   margin-bottom: 10px; /* Marge en bas de chaque lien */
   color: #333; /* Couleur du texte des liens */
@@ -227,55 +271,105 @@ input:checked + .slider:before {
 }
 
 /* Style des liens Facebook */
-.modal-content .facebook {
+.modal-content .facebook,
+.modal-content-dark-mode .facebook {
   background-color: #3b5998;
   color: white;
   padding: 12px;
   border-radius: 4px;
 }
 
-.modal-content .facebook:hover {
-  background-color: #172366;
+.modal-content .facebook:hover,
+.modal-content-dark-mode .facebook:hover {
+  /* background-color: #172366; */
+  font-weight: bold;
 }
 
 /* Style des liens Twitter */
-.modal-content .twitter {
+.modal-content .twitter,
+.modal-content-dark-mode .twitter {
   background-color: #33ccff;
-  color: white;
+  color: #00030F;
   padding: 12px;
   border-radius: 4px;
 }
 
-.modal-content .twitter:hover {
-  background-color: #00acee;
+.modal-content .twitter:hover,
+.modal-content-dark-mode .twitter:hover {
+  /* background-color: #00acee; */
+  font-weight: bold;
 }
 
 /* Style des liens LinkedIn */
-.modal-content .linkedin {
+.modal-content .linkedin,
+.modal-content-dark-mode .linkedin {
   background-color: #00a0dc;
-  color: white;
+  color: #00235C;
   padding: 12px;
   border-radius: 4px;
 }
 
-.modal-content .linkedin:hover {
-  background-color: #0077b5;
+.modal-content .linkedin:hover,
+.modal-content-dark-mode .linkedin:hover {
+  /* background-color: #0077b5; */
+  font-weight: bold;
 }
 
-#copyButton {
-  background: transparent;
+.modal-content .copyDiv {
   border: 1px solid black;
-  padding: 12px;
-  border-radius: 4px;
   width: 100%;
+  border-radius: 4px;
 }
 
-#copyButton:hover {
-  background: #f7f7f7;
+.modal-content-dark-mode .copyDivDarkMode {
+  border: 1px solid white !important;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.copyButton {
+  background: transparent;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.copyButtonDarkMode {
+  background: transparent;
+  border: none;
+  color: white !important;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.modal-content .copyButton:hover {
+  /* background: #f7f7f7; */
+  font-weight: bold;
+}
+
+.modal-content-dark-mode .copyButtonDarkMode:hover {
+  background: #333;
+}
+
+/* Styles pour l'animation de fondu */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Style du bouton .close */
-.close {
+.modalSocial .closeModal {
   position: absolute; /* Positionne le bouton en haut à droite de la modale */
   right: 14px;
   top: 0px;
@@ -287,13 +381,30 @@ input:checked + .slider:before {
   cursor: pointer; /* Curseur en forme de main lorsque le bouton est survolé */
 }
 
-.close:hover {
+/* Style du bouton .close de la Dark modale */
+.modalSocialDarkMode .closeDarkModal {
+  position: absolute; /* Positionne le bouton en haut à droite de la modale */
+  right: 14px;
+  top: 0px;
+  background: transparent;
+  border: none;
+  font-size: 34px; /* Taille de la croix */
+  font-weight: bold; /* Gras */
+  color: #f7f7f7; /* Couleur de la croix */
+  cursor: pointer; /* Curseur en forme de main lorsque le bouton est survolé */
+}
+
+.modal-content .closeModal:hover {
+  color: red;
+}
+
+.modal-content-dark-mode .closeDarkModal:hover {
   color: red;
 }
 
 .btnFav {
   order: 3;
-  margin-top: 40px;
+  margin-top: 10px;
   cursor: pointer;
   padding: 15px;
   margin-right: auto;
@@ -305,9 +416,19 @@ input:checked + .slider:before {
   box-shadow: 5px 5px 8px #cbcfd5, -5px -5px 8px #eff3f9;
 }
 
+.btnFav button {
+  background: transparent;
+  border: none;
+}
+
 .btnFav:hover {
   fill: rgb(234, 1, 1);
   box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
+}
+
+.btnFav img {
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .icons-contenu {
@@ -332,17 +453,25 @@ input:checked + .slider:before {
 .icons img {
   padding: 0;
   height: 32px;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
 }
 
 .icons:hover {
   box-shadow: inset 5px 5px 8px #cbcfd5, inset -5px -5px 8px #eff3f9;
 }
 
+.links {
+  text-align: center;
+}
+
+.links h2 {
+  color: white;
+  padding: 50px 20px 10px 20px;
+}
+
 #links {
   text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 25px 0 75px 0;
 }
 
 #links a {
@@ -353,8 +482,9 @@ input:checked + .slider:before {
   margin-top: 50px;
 }
 
-#links svg {
-  color: rgb(255, 240, 240);
+#links img {
+  filter: invert(98%) sepia(1%) saturate(6%) hue-rotate(5deg) brightness(109%)
+    contrast(103%);
   margin-right: 20px;
 }
 
@@ -407,7 +537,7 @@ input:checked + .slider:before {
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 40px;
+  bottom: 20px;
   right: -80px;
   border-radius: 100%;
   background-image: radial-gradient(
@@ -416,9 +546,24 @@ input:checked + .slider:before {
     rgb(27, 25, 50) 81.3%
   );
   text-align: center;
-  box-shadow: #888;
+  box-shadow: inset 5px 5px 8px rgb(136, 136, 136), inset -5px -5px -8px rgb(136, 136, 136);
   transition: 400ms;
   /*temps de disparition du btn */
+}
+
+.scroll:hover {
+  transform: scale(1.25);
+  transition: 400ms;
+  /*temps de disparition du btn */
+}
+
+.scroll:active {
+  transform: translateY(2px);
+}
+
+.scroll button {
+  background: transparent;
+  border: none;
 }
 
 .scroll img {
@@ -552,7 +697,6 @@ input:checked + .slider:before {
   }
   .presentation-title {
     order: 1;
-    padding: 10px 0;
   }
 }
 
@@ -599,7 +743,7 @@ input:checked + .slider:before {
     display: none;
   }
 
-  #links svg {
+  #links img {
     text-align: center;
     margin: 0;
   }
