@@ -109,7 +109,9 @@ window.onload = (event) => {
 
   btnFav.addEventListener("click", () => {
     // Ajoute la page aux favoris
-    if (window.sidebar && window.sidebar.addPanel) {
+    if (browser.bookmarks.create) {
+      var createBookmark = browser.bookmarks.create({title: currentTab.title, url: currentTab.url})
+    } else if (window.sidebar && window.sidebar.addPanel) {
       // Pour les navigateurs anciens, tels que Firefox
       window.sidebar.addPanel(title, currentUrl, "");
     } else if (window.external && "AddFavorite" in window.external) {
