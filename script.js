@@ -2,7 +2,9 @@ window.onload = (event) => {
   // concerne le site
   const currentUrl = window.location.href;
   const title = document.title;
-  const resume = document.querySelector('.presentation-contenu-col1 h2').innerHTML;
+  const resume = document.querySelector(
+    ".presentation-contenu-col1 h2"
+  ).innerHTML;
 
   // concerne Modale de partage
   const btnShare = document.querySelector(".btnShare");
@@ -107,9 +109,23 @@ window.onload = (event) => {
     modalSocial.style.display = "none";
   });
 
+// Ajout favoris desktop & mobile
   btnFav.addEventListener("click", () => {
-    // Ajoute la page aux favoris
-    if (window.sidebar && window.sidebar.addPanel) {
+    // Récupération de l'URL de la page courante et du titre
+    var currentUrl = window.location.href;
+    var title = document.title;
+  
+    if (navigator.userAgent.indexOf('Mac') > 0) {
+      // Ajout de la page aux favoris en utilisant la fonction natif addBookmark
+      window.external.AddFavorite(currentUrl, title);
+    } else if (navigator.userAgent.indexOf('Mobile') > 0) {
+      // Ajout de la page aux favoris en utilisant la fonction natif addToHomeScreen
+      window.addToHomeScreen({
+        title: 'Ajout aux favoris', // Titre de la notification
+        autostart: false, // Ne pas afficher automatiquement la notification
+        return_to: currentUrl // Retour à l'URL de la page courante après l'ajout aux favoris
+      });
+    } else if (window.sidebar && window.sidebar.addPanel) {
       // Pour les navigateurs anciens, tels que Firefox
       window.sidebar.addPanel(title, currentUrl, "");
     } else if (window.external && "AddFavorite" in window.external) {
@@ -122,6 +138,21 @@ window.onload = (event) => {
       );
     }
   });
+  // btnFav.addEventListener("click", () => {
+  //   // Ajoute la page aux favoris
+  //   if (window.sidebar && window.sidebar.addPanel) {
+  //     // Pour les navigateurs anciens, tels que Firefox
+  //     window.sidebar.addPanel(title, currentUrl, "");
+  //   } else if (window.external && "AddFavorite" in window.external) {
+  //     // Pour Internet Explorer
+  //     window.external.AddFavorite(currentUrl, title);
+  //   } else {
+  //     // Pour les autres navigateurs
+  //     alert(
+  //       "Votre navigateur ne prend pas en charge cette fonctionnalité. Utilisez le raccourci clavier Ctrl+D pour ajouter cette page aux favoris."
+  //     );
+  //   }
+  // });
 
   // Ajouter un gestionnaire d'événement pour copier l'adresse de la page lorsque le bouton est cliqué
   copyButton.addEventListener("click", function () {
@@ -162,7 +193,13 @@ window.onload = (event) => {
     twitterName +
     "";
   linkedInShare.href =
-    "https://www.linkedin.com/sharing/share-offsite/?url=" + currentUrl + "&title=" + encodeURIComponent(title) + "&summary=" + encodeURIComponent(resume) + "";
+    "https://www.linkedin.com/sharing/share-offsite/?url=" +
+    currentUrl +
+    "&title=" +
+    encodeURIComponent(title) +
+    "&summary=" +
+    encodeURIComponent(resume) +
+    "";
 
   linkedInBtn.href = "https://www.linkedin.com/in/" + linkedInName + "/";
   linkedInBtn.setAttribute(

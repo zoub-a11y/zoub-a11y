@@ -1,91 +1,121 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site web Linktr.ee de Zoubeir Haffez">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site web Linktr.ee de Zoubeir Haffez" />
     <!-- CSS only -->
-    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Linktree Zoubeir Haffez</title>
   </head>
   <body>
     <header>
       <section class="btnHaut">
-        <div class="row row-dark-mode">
-          <label class="switch" aria-label="Activer le mode sombre" title="Activer le mode sombre">
-            <input type="checkbox" id="toggle-dark-mode">
+        <div class="bandeau-dark-mode">
+          <label
+            class="switch"
+            aria-label="Activer le mode sombre"
+            title="Activer le mode sombre"
+          >
+            <input type="checkbox" id="toggle-dark-mode" />
             <span class="slider"></span>
           </label>
         </div>
-        <div class="row">
-          <div class="col-6 col-sm-6 col-md-3 col-lg-3">
-            <div class="btnShare" data-toggle="modal" data-target=".modalSocial">
-              <button aria-label="Ouvrir la modale de partage" title="Partager le contenu sur les réseaux sociaux" tabindex="0">
-                <img src="/zoub-a11y/pictos/share.svg" alt="Partager">
-              </button>
-            </div>
-<!-- DEBUT FENETRE MODALE -->
-            <div class="modalSocial" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-  <!-- Titre de la modale -->
-                  <h2>Partager sur les réseaux sociaux</h2>
-  <!-- Liens de partage -->
-                  <ul>
-                    <li>
-                      <a href="" class="facebook" target="_blank" aria-label="Partager sur Facebook" title="Partager sur Facebook">
-                        Partager sur Facebook
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" class="twitter" target="_blank" aria-label="Partager sur Twitter" title="Partager sur Twitter">
-                        Partager sur Twitter
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" class="linkedin" target="_blank" aria-label="Partager sur LinkedIn" title="Partager sur LinkedIn">
-                        Partager sur LinkedIn
-                      </a>
-                    </li>
-                    <li>
-                      <div class="copyDiv">
-                        <button class="copyButton">
-                          Copier l'adresse de la page
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                  <button class="closeModal" aria-label="Fermer la modale" title="Fermer la fenêtre" tabindex="0">
-                    &times;
-                  </button>
-                </div>
+        <div class="entete">
+          <div class="btnShare" data-toggle="modal" data-target=".modalSocial">
+            <button
+              aria-label="Ouvrir la modale de partage"
+              title="Partager le contenu sur les réseaux sociaux"
+              tabindex="0"
+            >
+              <img src="/zoub-a11y-main/pictos/share.svg" alt="Partager" />
+            </button>
+          </div>
+          <!-- DEBUT FENETRE MODALE -->
+          <div class="modalSocial" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <!-- Titre de la modale -->
+                <h2>Partager sur les réseaux sociaux</h2>
+                <!-- Liens de partage -->
+                <ul>
+                  <li>
+                    <a
+                      href=""
+                      class="facebook"
+                      target="_blank"
+                      aria-label="Partager sur Facebook"
+                      title="Partager sur Facebook"
+                    >
+                      Partager sur Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="twitter"
+                      target="_blank"
+                      aria-label="Partager sur Twitter"
+                      title="Partager sur Twitter"
+                    >
+                      Partager sur Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="linkedin"
+                      target="_blank"
+                      aria-label="Partager sur LinkedIn"
+                      title="Partager sur LinkedIn"
+                    >
+                      Partager sur LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <div class="copyDiv">
+                      <button class="copyButton" aria-label="Copier l'adresse de la page Web" title="Copier l'adresse de la page Web">
+                        Copier l'adresse de la page
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <button
+                  class="closeModal"
+                  aria-label="Fermer la modale"
+                  title="Fermer la fenêtre"
+                  tabindex="0"
+                >
+                  &times;
+                </button>
               </div>
             </div>
-<!-- FIN FENETRE MODALE -->
           </div>
-<!-- DEBUT NOM DU PROFIL -->
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 presentation-title">
+          <!-- FIN FENETRE MODALE -->
+          <!-- DEBUT NOM DU PROFIL -->
+          <div class="presentation-title">
             <h1>Zoubeir Haffez</h1>
           </div>
-<!-- FIN NOM DU PROFIL -->
-<!-- DEBUT BOUTON FAVORIS -->
-          <div class="col-6 col-sm-6 col-md-3 col-lg-3">
-            <div class="btnFav">
-              <button aria-label="Ajouter la page aux favoris" title="Favoriser cette page pour un accès facile ultérieur" tabindex="0">
-                <img src="/zoub-a11y/pictos/favoris.svg" alt="Favoris">
-              </button>
-            </div>
+          <!-- FIN NOM DU PROFIL -->
+          <!-- DEBUT BOUTON FAVORIS -->
+          <div class="btnFav">
+            <button
+              aria-label="Ajouter la page aux favoris"
+              title="Favoriser cette page pour un accès facile ultérieur"
+              tabindex="0"
+            >
+              <img src="/zoub-a11y-main/pictos/favoris.svg" alt="Favoris" />
+            </button>
           </div>
-<!-- FIN BOUTON FAVORIS -->
+          <!-- FIN BOUTON FAVORIS -->
         </div>
       </section>
     </header>
-    <main class="container">
+    <main>
       <section class="presentation">
         <div class="presentation-contenu">
-<!-- DEBUT RESUME DU PROFIL -->
+          <!-- DEBUT RESUME DU PROFIL -->
           <div class="presentation-contenu-col1">
             <h2>Défenseur de l'accessibilité</h2>
             <p>
@@ -93,6 +123,7 @@
               dans les domaines des nouvelles technologies et de
               l’accessibilité.
             </p>
+            <br />
             <p>
               J'évolue dans le milieu de l'audiovisuel et du cinéma depuis 15
               ans, passionné d'image malgré mon handicap visuel, j'ai suivi une
@@ -102,6 +133,7 @@
               l'accessibilité. Je publie régulièrement des newsletters et des
               podcasts.
             </p>
+            <br />
             <p>
               Je souhaite sensibiliser les entreprises et les collectivités sur
               les questions de l'accessibilité pour les personnes en situation
@@ -112,93 +144,188 @@
               "Bilans" auprès des différents acteurs du secteur.
             </p>
           </div>
-<!-- FIN RESUME DU PROFIL -->
-<!-- DEBUT IMAGE DU PROFIL -->
+          <!-- FIN RESUME DU PROFIL -->
+          <!-- DEBUT IMAGE DU PROFIL -->
           <div class="presentation-contenu-col2">
-            <img src="images/ZoubeirLogoV.webp" width="400px" max-height="400px" alt="Photo-du-propriétaire-de-ce-Linktree">
+            <img
+              src="images/ZoubeirLogoV.webp"
+              width="400px"
+              max-height="400px"
+              alt="Photo-du-propriétaire-de-ce-Linktree"
+            />
           </div>
-<!-- FIN IMAGE DU PROFIL -->
+          <!-- FIN IMAGE DU PROFIL -->
         </div>
-<!-- DEBUT BOUTONS RESEAUX SOCIAUX -->
-        <div class="row">
-          <div class="col-12">
-            <div class="icons-contenu">
-              <a class="icons Linkedin" target="_blank" href="" aria-label="" title="">
-                <img src="pictos/linkedin.svg" alt="icone-Linkedin">
-              </a>
-              <a class="icons Facebook" target="_blank" href="" aria-label="" title="">
-                <img src="pictos/facebook.svg" alt="icone-Facebook">
-              </a>
-              <a class="icons Insta" target="_blank" href="" aria-label="" title="">
-                <img src="pictos/instagram.svg" alt="icone-Instagram">
-              </a>
-              <a class="icons Twitter" target="_blank" href="" aria-label="" title="">
-                <img src="pictos/twitter.svg" alt="icone-Twitter">
-              </a>
-            </div>
+        <!-- DEBUT BOUTONS RESEAUX SOCIAUX -->
+        <div class="reseaux">
+          <div class="icons-contenu">
+            <a
+              class="icons Linkedin"
+              target="_blank"
+              href=""
+              aria-label=""
+              title=""
+            >
+              <img src="pictos/linkedin.svg" alt="icone-Linkedin" />
+            </a>
+            <a
+              class="icons Facebook"
+              target="_blank"
+              href=""
+              aria-label=""
+              title=""
+            >
+              <img src="pictos/facebook.svg" alt="icone-Facebook" />
+            </a>
+            <a
+              class="icons Insta"
+              target="_blank"
+              href=""
+              aria-label=""
+              title=""
+            >
+              <img src="pictos/instagram.svg" alt="icone-Instagram" />
+            </a>
+            <a
+              class="icons Twitter"
+              target="_blank"
+              href=""
+              aria-label=""
+              title=""
+            >
+              <img src="pictos/twitter.svg" alt="icone-Twitter" />
+            </a>
           </div>
         </div>
-<!-- FIN BOUTONS RESEAUX SOCIAUX -->
+        <!-- FIN BOUTONS RESEAUX SOCIAUX -->
       </section>
-<!-- DEBUT BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
+      <!-- DEBUT BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
       <section class="links">
         <h2>Ne ratez aucune de mes publications</h2>
         <div id="links">
-          <a target="_blank" href="https://www.youtube.com/channel/UCMBaofLMA9-VaoDSvrhtGKw?view_as=subscriber" class="btn black" aria-label="Chaîne YouTube de Zoubeir Haffez" title="Chaîne YouTube de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/youtube.svg" alt="Chaîne Youtube de Zoubeir Haffez">
+          <a
+            target="_blank"
+            href="https://www.youtube.com/channel/UCMBaofLMA9-VaoDSvrhtGKw?view_as=subscriber"
+            class="btn black"
+            aria-label="Chaîne YouTube de Zoubeir Haffez"
+            title="Chaîne YouTube de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/youtube.svg"
+              alt="Chaîne Youtube de Zoubeir Haffez"
+            />
             <span class="youtube">YouTube</span>
           </a>
-          <a target="_blank" href="https://open.spotify.com/show/0gped3xtNvt3WDlIbhkVvu" class="btn black" aria-label="Profil de Zoubeir Haffez" title="Profil de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/spotify.svg" alt="Profil de Zoubeir Haffez">
+          <a
+            target="_blank"
+            href="https://open.spotify.com/show/0gped3xtNvt3WDlIbhkVvu"
+            class="btn black"
+            aria-label="Profil de Zoubeir Haffez"
+            title="Profil de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/spotify.svg"
+              alt="Profil de Zoubeir Haffez"
+            />
             <span class="spotify">Spotify</span>
           </a>
-          <a target="_blank" class="btn nightblue" href="https://podcasts.apple.com/us/podcast/zcast-dans-mes-baskets-lepodcast/id1572062730" aria-label="PodCasts de Zoubeir Haffez" title="PodCasts de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/podcast.svg" alt="Podacasts de Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn nightblue"
+            href="https://podcasts.apple.com/us/podcast/zcast-dans-mes-baskets-lepodcast/id1572062730"
+            aria-label="PodCasts de Zoubeir Haffez"
+            title="PodCasts de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/podcast.svg"
+              alt="Podacasts de Zoubeir Haffez"
+            />
             <span class="podcast">Podcast</span>
           </a>
-          <a target="_blank" class="btn black" href="https://anchor.fm/zoubeir-haffez" aria-label="Podcast ZCAST de Zoubeir Haffez" title="Podcast ZCAST de Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn black"
+            href="https://anchor.fm/zoubeir-haffez"
+            aria-label="Podcast ZCAST de Zoubeir Haffez"
+            title="Podcast ZCAST de Zoubeir Haffez"
+          >
             ZCAST - Le Podcast
           </a>
-          <a target="_blank" class="btn black" href="https://zoubeir.substack.com/" aria-label="Substack de Zoubeir Haffez" title="Substack de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/substack.svg" alt="Substack de Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn black"
+            href="https://zoubeir.substack.com/"
+            aria-label="Substack de Zoubeir Haffez"
+            title="Substack de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/substack.svg"
+              alt="Substack de Zoubeir Haffez"
+            />
             <span class="substack">Substack</span>
           </a>
-          <a target="_blank" class="btn black" href="https://www.clubhouse.com/@zoubeir.h" aria-label="ClubHouse de Zoubeir Haffez" title="ClubHouse de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/clubhouse.svg" alt="Clubhouse de Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn black"
+            href="https://www.clubhouse.com/@zoubeir.h"
+            aria-label="ClubHouse de Zoubeir Haffez"
+            title="ClubHouse de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/clubhouse.svg"
+              alt="Clubhouse de Zoubeir Haffez"
+            />
             <span class="clubhouse">Clubhouse</span>
           </a>
-          <a target="_blank" class="btn nightblue" href="https://ledigitalpourtous.fr/author/zoubeirh/" aria-label="Informations sur l'accessibilité par Zoubeir Haffez" title="Informations sur l'accessibilité par Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn nightblue"
+            href="https://ledigitalpourtous.fr/author/zoubeirh/"
+            aria-label="Informations sur l'accessibilité par Zoubeir Haffez"
+            title="Informations sur l'accessibilité par Zoubeir Haffez"
+          >
             Le numérique <span>pour tous</span>
           </a>
-          <a target="_blank" class="btn black" href="https://github.com/zoub-a11y" aria-label="Compte Github de Zoubeir Haffez" title="Compte Github de Zoubeir Haffez">
-            <img src="/zoub-a11y/pictos/github.svg" alt="GitHub de Zoubeir Haffez">
+          <a
+            target="_blank"
+            class="btn black"
+            href="https://github.com/zoub-a11y"
+            aria-label="Compte Github de Zoubeir Haffez"
+            title="Compte Github de Zoubeir Haffez"
+          >
+            <img
+              src="/zoub-a11y-main/pictos/github.svg"
+              alt="GitHub de Zoubeir Haffez"
+            />
             <span class="github">Zoubeir Haffez</span>
           </a>
         </div>
-<!-- FIN BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
+        <!-- FIN BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
       </section>
     </main>
-<!-- FOOTER -->
-    <footer>
-        <p>Copyright &copy; 2022</p>
-    </footer>
-<!-- DEBUT BOUTONS HAUT DE PAGE -->
-    <div id="btn" class="scroll"  onclick="scrollhaut();">
-      <button aria-label="Remonter en haut de la page" title="Aller au début de la page" tabindex="0">
-        <img src="/zoub-a11y/pictos/chevronUp.svg" alt="flèche haut de page">
+    <!-- DEBUT BOUTONS HAUT DE PAGE -->
+    <div id="btn" class="scroll" onclick="scrollhaut();">
+      <button
+        aria-label="Remonter en haut de la page"
+        title="Aller au début de la page"
+        tabindex="0"
+      >
+        <img
+          src="/zoub-a11y-main/pictos/chevronUp.svg"
+          alt="flèche haut de page"
+        />
       </button>
     </div>
-<!-- FIN BOUTONS HAUT DE PAGE -->
-<!-- JavaScript Bundle with Popper -->
-<script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<script src="script.js"></script>
-<script>
-  function scrollhaut() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-  </script>
-</body>
+    <!-- FIN BOUTONS HAUT DE PAGE -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="script.js"></script>
+    <script>
+      function scrollhaut() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
 </html>
