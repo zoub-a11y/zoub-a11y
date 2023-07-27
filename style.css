@@ -408,6 +408,7 @@ h1 {
     content: url(images/logo/logoLien/uncutHover.svg);
 }
 
+
 /* CSS pour le responsive  */
 /*  responsive pour les ecrans inférieurs à 1319px */
 @media (max-width: 1319px) {
@@ -533,11 +534,13 @@ h1 {
 /*Fin du CSS de la page d'acceuil*/
 
 
+
 /* CSS pour le formulaire de contact */
 
 .formulaire {
     background-color: #BDD3E0;
 }
+
 
 .headerFormulaire{
 display: flex;
@@ -551,8 +554,7 @@ padding-bottom: 20px;
 
 
 .headerFormulaire .boutonAccueil{
-    margin-left: 30px;
-    border: solid red 1px;
+    width: 300px;
 
 }
 
@@ -565,24 +567,28 @@ padding-bottom: 20px;
     color: #1E2022;
     font-size: 50px;
     font-weight: 800;
-    border: solid red 1px;
     margin: 0 auto;
     width: 50%;
 }
 
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 /***************/
 
 /*Bouton nom , prenom , email*/
 form input {
     background-color: #F0F5F9;
     width: 70%;
-    margin-left: 12%;
     font-size: 20px;
     padding: 30px 30px;
     border-radius: 20px;
     margin-bottom: 20px;
     border: solid 2px #1E2022;
     color: #1E2022;
+    margin: 10px auto;
 }
 
 form input::placeholder {
@@ -595,13 +601,13 @@ form input::placeholder {
 form textarea {
     background-color: #F0F5F9;
     width: 70%;
-    margin-left: 12%;
     font-size: 20px;
     padding: 130px 30px;
     border-radius: 20px;
     border-color: #1E2022;
     border: solid 2px #1E2022;
     color: #1E2022;
+    margin:10px auto;
 }
 
 form input:focus-within {
@@ -651,15 +657,60 @@ form button:hover {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-    background-color: #F0F5F9;
-    border: solid 2px #1E2022;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 30px;
+    width: 60%;
+    margin: 30px auto;
     color: #1E2022;
-    margin-bottom: 30px;
     padding-bottom: 10px;
     border-radius: 20px;
 }
+
+/* CSS pour le darkmode du formulaire */
+
+.dark-mode .formulaire{
+    background-color: #363C41;
+}
+
+
+
+.dark-mode .message{
+    color: #F0F5F9;
+}
+
+.dark-mode form input{
+    background-color: #1E2022;
+    border: solid 2px #F0F5F9;
+    color: #F0F5F9;
+}
+
+.dark-mode form textarea{
+    background-color: #1E2022;
+    border: solid 2px #F0F5F9;
+    color: #F0F5F9;
+}
+
+.dark-mode form input::placeholder{
+    color: #F0F5F9;
+}
+
+.dark-mode form textarea::placeholder{
+    color: #F0F5F9;
+}
+
+.dark-mode form button{
+    background-color: #1E2022;
+    border: #F0F5F9 solid 2px;
+    color: #F0F5F9;
+}
+
+.dark-mode form button:hover{
+    background-color: #F0F5F9;
+    color: #1E2022;
+
+}
+
+
+
+
+
 
 /* Fin du CSS pour le formulaire */
