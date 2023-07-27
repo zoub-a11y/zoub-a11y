@@ -535,6 +535,11 @@ h1 {
     .blocSwitch {
         width: 25%;
     }
+
+    .boutonLien img{
+        width: 40px;
+        height: auto;
+    }
 }
 
 /* responsive pour l'équivalent d'un écran de telephone */
@@ -579,6 +584,11 @@ h1 {
     .boutonLien {
         width: 80%;
         height: 80px;
+    }
+
+    .boutonLien img{
+        width: 40px;
+        height: auto;
     }
 
 
