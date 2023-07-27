@@ -16,23 +16,15 @@ button {
 /* CSS pour le header */
 
 header {
-    padding-top: 20px;
+    padding: 45px 20px 30px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    background-color: #BDD3E0;
-    padding-bottom: 30px;
+    width: calc(100% - 40px);
+    background-color: #BDD3E0; 
 }
 
 /* CSS pour les boutons en haut à droite */
-
-
-.boutonHaut button img {
-    width: 60px;
-    height: auto;
-}
-
 .boutonHaut {
     width: 300px;
     height: auto;
@@ -40,10 +32,13 @@ header {
     padding-left: 20px;
 }
 
-.contact,
-.favori,
-.partager {
-    margin: 10px;
+.boutonHaut button {
+     margin: 10px;
+}
+
+.boutonHaut button img {
+    width: 60px;
+    height: auto;
 }
 
 .contact :hover {
@@ -74,7 +69,6 @@ h1 {
 }
 
 /* CSS pour le bouton switch */
-
 .blocSwitch {
     width: 300px;
     height: 50px;
@@ -140,16 +134,14 @@ h1 {
 
 /* FIN DU CSS HEADER */
 
-
 /* CSS pour la partie de présentation */
 
 .contenu {
     display: flex;
     justify-content: space-between;
     background-color: #BDD3E0;
-    padding-bottom: 70px;
+    padding: 0 50px 70px 50px;
 }
-
 
 /* CSS pour le paragraphe de présentation écite */
 .presentation {
@@ -165,18 +157,12 @@ h1 {
     color: #1E2022;
 }
 
-/* espacement entre les paragraphes */
-.espacement {
-    height: 60px;
-}
-
 .presentation p {
     font-size: 23px;
     font-weight: 400;
     margin-top: 20px;
     line-height: 35px;
     color: #1E2022;
-
 }
 
 
@@ -195,7 +181,6 @@ h1 {
 
 
 /* Bouton Reseaux sociaux */
-
 .boutonReseaux {
     width: 80px;
     display: flex;
@@ -204,20 +189,15 @@ h1 {
     margin-right: 20px;
 }
 
-.boutonReseaux button img {
-    width: 80px;
-    height: auto;
-}
-
-
-.instagram,
-.twitter,
-.linkedin,
-.facebook {
+.boutonReseaux button {
     width: 100px;
     height: auto;
     padding-top: 30px;
+}
 
+.boutonReseaux button img {
+    width: 80px;
+    height: auto;
 }
 
 .instagram :hover {
@@ -272,15 +252,7 @@ h1 {
     border-radius: 70px;
 }
 
-.youtube,
-.spotify,
-.podcast,
-.zcast,
-.substack,
-.clubhouse,
-.digital,
-.github,
-.uncut {
+.boutonLien a div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,7 +295,6 @@ h1 {
     justify-content: space-around;
     text-align: center;
     padding-top: 20px;
-
 }
 
 .listeFooter a {
@@ -331,8 +302,6 @@ h1 {
     color: #F0F5F9;
     width: 200px;
     text-decoration: none;
-
-
 }
 
 .listeFooter a::before {
@@ -363,11 +332,7 @@ h1 {
     padding-bottom: 20px;
 }
 
-
-
 /* CSS pour le darkmode */
-
-
 .dark-mode {
     background-color: #24292C;
     color: #F0F5F9;
@@ -443,17 +408,9 @@ h1 {
     content: url(images/logo/logoLien/uncutHover.svg);
 }
 
-
-
-
-
 /* CSS pour le responsive  */
-
-
 /*  responsive pour les ecrans inférieurs à 1319px */
 @media (max-width: 1319px) {
-
-
     h1 {
         font-size: 65px;
     }
@@ -487,31 +444,19 @@ h1 {
         font-size: 30px;
     }
 
-
     .presentation p {
         font-size: 25px;
     }
 
-
-
     .textePublication {
         text-align: center;
-
     }
 
     .textePublication h2 {
         font-size: 40px;
     }
 
-    .youtube,
-    .spotify,
-    .podcast,
-    .zcast,
-    .substack,
-    .clubhouse,
-    .digital,
-    .github,
-    .uncut{
+    .boutonLien a div {
         font-size: 25px;
     }
 
@@ -540,23 +485,16 @@ h1 {
 /* responsive pour l'équivalent d'un écran de telephone */
 
 @media (max-width: 600px) {
-
-
     .boutonReseaux {
+        width: 55px;
+    }
+
+    .boutonReseaux button {
         width: 55px;
     }
 
     .boutonReseaux button img {
         width: 55px;
-    }
-
-    .instagram,
-    .twitter,
-    .linkedin,
-    .facebook {
-        width: 55px;
-
-
     }
 
     .switch {
@@ -580,7 +518,6 @@ h1 {
         width: 80%;
         height: 80px;
     }
-
 
     .listeFooter a {
         width: 100px;
