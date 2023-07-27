@@ -10,10 +10,26 @@
 </head>
 
 <body class="formulaire">
+<div class="headerFormulaire">
+<a href="index.html">
+    <button class="boutonAccueil" tabindex="0" aria-label="Retour à la page d'accueil" title="Bouton Accueil">
+        <img src="images/boutonAccueil/boutonAccueil.svg" alt="Accueil">
+    </button>
+</a>
+
+    <h1 class="titreFormulaire" aria-label="Titre de la page" title="Formulaire de contact" tabindex="1">Formulaire de contact</h1>
+
+    <div class="blocSwitch">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch" title="Passer du mode clair au mode sombre" aria-label="Passer du mode clair au mode sombre" tabindex="4" />
+            <span></span>
+        </label>
+    </div>
+
+</div>
 
     <form action="https://formspree.io/f/maygngrn" method="POST">
 
-        <h1 aria-label="Titre de la page" title="Formulaire de contact" tabindex="1">Formulaire de contact</h1>
 
         <input tabindex="2" aria-label="Ecrivez votre nom" title="nom de famille" type="text" name="first" placeholder="Nom :" autocomplete="family-name" required>
 
@@ -32,7 +48,7 @@
 
     </div>
 
-
+<script src="script.js"></script>
 </body>
 
 </html>

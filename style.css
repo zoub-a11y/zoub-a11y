@@ -536,51 +536,72 @@ h1 {
 /* CSS pour le formulaire de contact */
 
 .formulaire {
-    background-color: #1E2022;
+    background-color: #BDD3E0;
+}
+
+.headerFormulaire{
+display: flex;
+padding-top: 30px;
+text-align: center;
+align-items: center;
+padding-bottom: 20px;
+
+}
+/* Bouton Accueil */
+
+
+.headerFormulaire .boutonAccueil{
+    margin-left: 30px;
+    border: solid red 1px;
+
+}
+
+.boutonAccueil:hover img{
+    content:url(images/boutonAccueil/boutonAccueilHover.svg) ;
 }
 
 /*titre*/
-form h1 {
-    color: #F0F5F9;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    text-align: center;
+.titreFormulaire {
+    color: #1E2022;
     font-size: 50px;
     font-weight: 800;
+    border: solid red 1px;
+    margin: 0 auto;
+    width: 50%;
 }
 
 /***************/
 
 /*Bouton nom , prenom , email*/
 form input {
-    background-color: #868686;
+    background-color: #F0F5F9;
     width: 70%;
     margin-left: 12%;
     font-size: 20px;
     padding: 30px 30px;
     border-radius: 20px;
     margin-bottom: 20px;
-    border: solid 2px #F0F5F9;
-    color: #F0F5F9;
+    border: solid 2px #1E2022;
+    color: #1E2022;
 }
 
 form input::placeholder {
-    color: #F0F5F9;
+    color: #1E2022;
 }
 
 /*********************************/
 
 /*Bouton Entrer le message */
 form textarea {
-    background-color: #868686;
+    background-color: #F0F5F9;
     width: 70%;
     margin-left: 12%;
     font-size: 20px;
     padding: 130px 30px;
     border-radius: 20px;
     border-color: #1E2022;
-    border: solid 2px #F0F5F9;
-    color: #F0F5F9;
+    border: solid 2px #1E2022;
+    color: #1E2022;
 }
 
 form input:focus-within {
@@ -594,7 +615,7 @@ form textarea:focus-within {
 }
 
 form textarea::placeholder {
-    color: #F0F5F9;
+    color: #1E2022;
 }
 
 /*****************************/
@@ -612,6 +633,7 @@ form button {
     margin: auto;
     margin-top: 50px;
     font-weight: 700;
+    border: #1E2022 solid 2px;
 }
 
 form button:hover {
@@ -619,7 +641,6 @@ form button:hover {
     cursor: pointer;
     background-color: #1E2022;
     color: #F0F5F9;
-    border: solid 2px #F0F5F9;
 }
 
 /*****************************/
@@ -630,12 +651,12 @@ form button:hover {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-    background-color: #868686;
-    border: solid 2px #F0F5F9;
+    background-color: #F0F5F9;
+    border: solid 2px #1E2022;
     margin-left: 200px;
     margin-right: 200px;
     margin-top: 30px;
-    color: #F0F5F9;
+    color: #1E2022;
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-radius: 20px;
