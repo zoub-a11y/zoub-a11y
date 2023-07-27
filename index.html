@@ -2,232 +2,274 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Site web Linktr.ee de Zoubeir Haffez" />
-  <!-- CSS only -->
-  <link rel="stylesheet" href="styles.css" />
-  <title>Linktree Zoubeir Haffez</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site web Linktr.ee de Zoubeir Haffez" />
+    <title>Linktree Zoubeir Haffez</title>
+    <!-- Lien CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <section class="btnHaut">
-      <div class="bandeau-dark-mode">
-        <label class="switch" aria-label="Activer le mode sombre" title="Activer le mode sombre">
-          <input type="checkbox" id="toggle-dark-mode" />
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="entete">
-        <div class="btnShare" data-toggle="modal" data-target=".modalSocial">
-          <button aria-label="Ouvrir la modale de partage" title="Partager le contenu sur les réseaux sociaux"
-            tabindex="0">
-            <img src="/zoub-a11y/pictos/share.svg" alt="Partager" />
-          </button>
+    <!-- HEADER -->
+    <header>
+        <!-- Boutons en haut à droite -->
+        <section class="boutonHaut">
+
+            <a href="ZoubeirHaffezContact.vcf">
+                <button class="contact" aria-label="Telecharger la fiche contact" title="Fiche contact pour retrouver mes coordonnées" tabindex="0">
+                    <!-- Icône pour le bouton Contact -->
+                    <img src="images/logo/boutonRond/contact.svg" alt="Contact">
+                </button>
+            </a>
+            <a href='javascript:void(favoris());' rel='shortcut'>
+                <button class="favori" aria-label="Ajouter la page aux favoris" title="Favoriser cette page pour un accès facile ultérieur" tabindex="1">
+                    <!-- Icône pour le bouton Favori -->
+                    <img src="images/logo/boutonRond/favori.svg" alt="Favori">
+                </button>
+            </a>
+
+            <button id="shareButton" class="partager" aria-label="Partager le site" title="copier le lien ou l'envoyer" tabindex="2" onclick="shareOrCopyLink()">
+                <!-- Icône pour le bouton Partager -->
+                <img src="images/logo/boutonRond/partager.svg" alt="Partager">
+                <a href="https://example.com" id="lien"></a>
+                <textarea id="zone-texte" style="position: absolute; left: -9999px;"></textarea>
+            </button>
+
+
+            </button>
+
+        </section>
+
+        <!-- Titre/Nom -->
+        <div class="nom">
+            <!-- Titre principal -->
+            <h1 title="Mon nom" tabindex="3">Zoubeir Haffez</h1>
         </div>
-        <!-- DEBUT FENETRE MODALE -->
-        <div class="modalSocial" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <!-- Titre de la modale -->
-              <h2>Partager sur les réseaux sociaux</h2>
-              <!-- Liens de partage -->
-              <ul>
-                <li>
-                  <a href="" class="facebook" target="_blank" aria-label="Partager sur Facebook"
-                    title="Partager sur Facebook">
-                    Partager sur Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="twitter" target="_blank" aria-label="Partager sur Twitter"
-                    title="Partager sur Twitter">
-                    Partager sur Twitter
-                  </a>
-                </li>
-                <!--
-                <li>
-                  <a href="" class="linkedin" target="_blank" aria-label="Partager sur LinkedIn"
-                    title="Partager sur LinkedIn">
-                    Partager sur LinkedIn
-                  </a>
-                </li>
-                -->
-                <li>
-                  <div class="copyDiv">
-                    <button class="copyButton" aria-label="Copier l'adresse de la page Web"
-                      title="Copier l'adresse de la page Web">
-                      Copier l'adresse de la page
-                    </button>
-                  </div>
-                </li>
-              </ul>
-              <button class="closeModal" aria-label="Fermer la modale" title="Fermer la fenêtre" tabindex="0">
-                &times;
-              </button>
+
+        <!-- Bouton switch darkmode/lightmode -->
+        <div class="blocSwitch">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch" title="Passer du mode clair au mode sombre" aria-label="Passer du mode clair au mode sombre" tabindex="4" />
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="contenu">
+            <!-- Présentation écrite -->
+            <div class="presentation">
+                <!-- Titre de la présentation -->
+                <h2 tabindex="5">Défenseur de l'accessibilité</h2>
+
+                <div class="espacement"></div>
+
+                <!-- Texte de présentation -->
+                <div class="texte" tabindex="6">
+                    <p>
+                        Réalisateur, Documentariste, Reporter et Journaliste spécialisé
+                        dans les domaines des nouvelles technologies et de
+                        l’accessibilité.
+                    </p>
+                    <br />
+                    <p>
+                        J'évolue dans le milieu de l'audiovisuel et du cinéma depuis 15
+                        ans, passionné d'image malgré mon handicap visuel, j'ai suivi une
+                        formation chez JARIS, puis une alternance (EICAR) au sein du
+                        groupe M6. Je réalise et monte des vidéos à mon compte depuis
+                        2018, tout en gérant ma chaine YouTube orientée sur
+                        l'accessibilité. Je publie régulièrement des newsletters et des
+                        podcasts.
+                    </p>
+                    <br />
+                    <p>
+                        Je souhaite sensibiliser les entreprises et les collectivités sur
+                        les questions de l'accessibilité pour les personnes en situation
+                        de handicap dans des domaines aussi divers que les nouvelles
+                        technologies, l'accès aux infrastructures, ou tout simplement la
+                        vie au quotidien. Je propose une expertise #accessibility #a11y
+                        sous la forme d’interventions, d'ateliers et la mise en place de
+                        "Bilans" auprès des différents acteurs du secteur.
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- FIN FENETRE MODALE -->
-        <!-- DEBUT NOM DU PROFIL -->
-        <div class="presentation-title">
-          <h1>Zoubeir Haffez</h1>
-        </div>
-        <!-- FIN NOM DU PROFIL -->
-        <!-- DEBUT BOUTON FAVORIS -->
-        <div class="btnFav">
-          <button aria-label="Ajouter la page aux favoris" title="Favoriser cette page pour un accès facile ultérieur"
-            tabindex="0">
-            <img src="/zoub-a11y/pictos/favoris.svg" alt="Favoris" />
-          </button>
-        </div>
-        <!-- FIN BOUTON FAVORIS -->
-      </div>
-    </section>
-  </header>
-  <main>
-    <section class="presentation">
-      <div class="presentation-contenu">
-        <!-- DEBUT RESUME DU PROFIL -->
-        <div class="presentation-contenu-col1">
-          <h2>Défenseur de l'accessibilité</h2>
-          <p>
-            Réalisateur, Documentariste, Reporter et Journaliste spécialisé
-            dans les domaines des nouvelles technologies et de
-            l’accessibilité.
-          </p>
-          <br />
-          <p>
-            J'évolue dans le milieu de l'audiovisuel et du cinéma depuis 15
-            ans, passionné d'image malgré mon handicap visuel, j'ai suivi une
-            formation chez JARIS, puis une alternance (EICAR) au sein du
-            groupe M6. Je réalise et monte des vidéos à mon compte depuis
-            2018, tout en gérant ma chaine YouTube orientée sur
-            l'accessibilité. Je publie régulièrement des newsletters et des
-            podcasts.
-          </p>
-          <br />
-          <p>
-            Je souhaite sensibiliser les entreprises et les collectivités sur
-            les questions de l'accessibilité pour les personnes en situation
-            de handicap dans des domaines aussi divers que les nouvelles
-            technologies, l'accès aux infrastructures, ou tout simplement la
-            vie au quotidien. Je propose une expertise #accessibility #a11y
-            sous la forme d’interventions, d'ateliers et la mise en place de
-            "Bilans" auprès des différents acteurs du secteur.
-          </p>
-        </div>
-        <!-- FIN RESUME DU PROFIL -->
-        <!-- DEBUT IMAGE DU PROFIL -->
-        <div class="presentation-contenu-col2">
-          <img src="images/ZoubeirLogoV.webp" width="400px" max-height="400px"
-            alt="Photo-du-propriétaire-de-ce-Linktree" />
-        </div>
-        <!-- FIN IMAGE DU PROFIL -->
-      </div>
-      <!-- DEBUT BOUTONS RESEAUX SOCIAUX -->
-      <div class="reseaux">
-        <div class="icons-contenu">
-          <a class="icons Linkedin" target="_blank" href="" aria-label="" title="">
-            <img src="pictos/linkedin.svg" alt="icone-Linkedin" />
-          </a>
-          <a class="icons Facebook" target="_blank" href="" aria-label="" title="">
-            <img src="pictos/facebook.svg" alt="icone-Facebook" />
-          </a>
-          <a class="icons Insta" target="_blank" href="" aria-label="" title="">
-            <img src="pictos/instagram.svg" alt="icone-Instagram" />
-          </a>
-          <a class="icons Twitter" target="_blank" href="" aria-label="" title="">
-            <img src="pictos/twitter.svg" alt="icone-Twitter" />
-          </a>
-        </div>
-      </div>
-      <!-- FIN BOUTONS RESEAUX SOCIAUX -->
-    </section>
-    <!-- DEBUT BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
-    <section class="links">
-      <h2>Ne ratez aucune de mes publications</h2>
-      <div id="links">
-        <a target="_blank" href="https://www.youtube.com/channel/UCMBaofLMA9-VaoDSvrhtGKw?view_as=subscriber"
-          class="btn black" aria-label="Chaîne YouTube de Zoubeir Haffez" title="Chaîne YouTube de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/youtube.svg" alt="Chaîne Youtube de Zoubeir Haffez" />
-          <span class="youtube">YouTube</span>
-        </a>
-        <a target="_blank" href="https://open.spotify.com/show/0gped3xtNvt3WDlIbhkVvu" class="btn black"
-          aria-label="Profil de Zoubeir Haffez" title="Profil de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/spotify.svg" alt="Profil de Zoubeir Haffez" />
-          <span class="spotify">Spotify</span>
-        </a>
-        <a target="_blank" class="btn nightblue"
-          href="https://podcasts.apple.com/us/podcast/zcast-dans-mes-baskets-lepodcast/id1572062730"
-          aria-label="PodCasts de Zoubeir Haffez" title="PodCasts de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/podcast.svg" alt="Podacasts de Zoubeir Haffez" />
-          <span class="podcast">Podcast</span>
-        </a>
-        <a target="_blank" class="btn black" href="https://anchor.fm/zoubeir-haffez"
-          aria-label="Podcast ZCAST de Zoubeir Haffez" title="Podcast ZCAST de Zoubeir Haffez">
-          ZCAST - Le Podcast
-        </a>
-        <a target="_blank" class="btn black" href="https://zoubeir.substack.com/"
-          aria-label="Substack de Zoubeir Haffez" title="Substack de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/substack.svg" alt="Substack de Zoubeir Haffez" />
-          <span class="substack">Substack</span>
-        </a>
-        <a target="_blank" class="btn black" href="https://www.clubhouse.com/@zoubeir.h"
-          aria-label="ClubHouse de Zoubeir Haffez" title="ClubHouse de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/clubhouse.svg" alt="Clubhouse de Zoubeir Haffez" />
-          <span class="clubhouse">Clubhouse</span>
-        </a>
-        <a target="_blank" class="btn nightblue" href="https://ledigitalpourtous.fr/author/zoubeirh/"
-          aria-label="Informations sur l'accessibilité par Zoubeir Haffez"
-          title="Informations sur l'accessibilité par Zoubeir Haffez">
-          Le numérique <span>pour tous</span>
-        </a>
-        <a target="_blank" class="btn black" href="https://github.com/zoub-a11y"
-          aria-label="Compte Github de Zoubeir Haffez" title="Compte Github de Zoubeir Haffez">
-          <img src="/zoub-a11y/pictos/github.svg" alt="GitHub de Zoubeir Haffez" />
-          <span class="github">Zoubeir Haffez</span>
-        </a>
-      </div>
-      <!-- FIN BOUTONS LIENS DIFFERENTES CHAINES, ETC. -->
-    </section>
-  </main>
-  <!--FOOTER!-->
-  <footer>
-    <ul class="menu" role="menu">
-        <li><a href="CGU.html" aria-label="Conditions générales d'utilisation">CGU</a></li>
+            <!-- Fin de la présentation écrite -->
 
-        <li class="barre">|</li>
+            <!-- Image de Zoubeir -->
+            <div class="logoZoubeir">
+                <img src="images/ZoubeirLogo.png" alt="LogoZoubeirV" title="Image de Zoubeir Haffez" aria-label="Photographie de Zoubeir Haffez qui fait un cadre avec ses mains" tabindex="7">
+            </div>
 
-        <li><a href="Accessibilité.html" aria-label="Page d'accessibilité">Accessibilité</a></li>
+            <!-- Boutons réseaux sociaux -->
+            <div class="boutonReseaux">
+                <a href="https://instagram.com/zoubeir.haffez?igshid=MzRlODBiNWFlZA==" target="_blank">
+                    <button class="instagram" aria-label="Voir mon instagram" title="Lien vers ma page instagram" tabindex="8">
+                        <!-- Icône pour le bouton Instagram -->
+                        <img src="images/logo/boutonReseau/instagram.svg" alt="instagram">
+                    </button>
+                </a>
+                <a href="https://twitter.com/ZoubeirH" target="_blank">
+                    <button class="twitter" aria-label="Voir mon twitter" title="Lien vers ma page Twitter" tabindex="9">
+                        <!-- Icône pour le bouton Twitter -->
+                        <img src="images/logo/boutonReseau/twitter.svg" alt="twitter">
+                    </button>
+                </a>
+                <a href="https://fr.linkedin.com/in/zoubeirhaffez" target="_blank">
+                    <button class="linkedin" aria-label="Voir mon linkedin" title="Lien vers ma page linkedin" tabindex="10">
+                        <!-- Icône pour le bouton LinkedIn -->
+                        <img src="images/logo/boutonReseau/linkedin.svg" alt="linkedin">
+                    </button>
+                </a>
+                <a href="https://www.facebook.com/zoubeir.haffez" target="_blank">
+                    <button class="facebook" aria-label="Voir mon facebook" title="Lien vers ma page facebook" tabindex="11">
+                        <!-- Icône pour le bouton Facebook -->
+                        <img src="images/logo/boutonReseau/facebook.svg" alt="facebook">
+                    </button>
+                </a>
+            </div>
+        </div>
 
-        <li class="barre">|</li>
+        <!-- FIN de la présentation -->
 
-        <li><a href="Contact.html" aria-label="Nous contacter">Nous contacter</a></li>
-    </ul>
-        <p class="copyright"> Mention légales | &copy;Copyright 2023</p>
-</footer>
-<!--FIN DU FOOTER-->
+        <!-- BLOC SAPIN DE NOEL -->
+        <div class="textePublication">
+            <!-- Titre du bloc -->
+            <h2 tabindex="12">Ne ratez aucune de mes publications</h2>
+        </div>
 
-  <!-- DEBUT BOUTONS HAUT DE PAGE -->
-  <div id="btn" class="scroll" onclick="scrollhaut();">
-    <button aria-label="Remonter en haut de la page" title="Aller au début de la page" tabindex="0">
-      <img src="/zoub-a11y/pictos/chevronUp.svg" alt="flèche haut de page" />
-    </button>
-  </div>
-  <!-- FIN BOUTONS HAUT DE PAGE -->
-  <!-- JavaScript Bundle with Popper -->
-  <script src="script.js"></script>
-  <script>
-    function scrollhaut() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  </script>
+        <!-- Boutons vers les liens -->
+        <div class="blocBoutonLien">
+            <!-- Bouton vers YouTube -->
+            <button class="boutonLien" aria-label="Lien vers ma page YouTube" title="Lien vers Youtube" tabindex="13">
+                <a href="https://www.youtube.com/@zoubeirhaffez/featured" target="_blank">
+                    <div class="youtube">
+                        <!-- Icône pour YouTube -->
+                        <img src="images/logo/logoLien/youtube.svg" alt="Youtube">
+                        <p>YouTube</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers Spotify -->
+            <button class="boutonLien" aria-label="Lien vers ma page Spotify" title="Lien vers Spotify" tabindex="14">
+                <a href="https://open.spotify.com/show/0gped3xtNvt3WDlIbhkVvu" target="_blank">
+                    <div class="spotify">
+                        <!-- Icône pour Spotify -->
+                        <img src="images/logo/logoLien/spotify.svg" alt="Spotify">
+                        <p>Spotify</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers les podcasts -->
+            <button class="boutonLien" aria-label="Lien vers mes podcasts" title="Lien vers mes podcasts" tabindex="15">
+                <a href="https://podcasts.apple.com/us/podcast/zcast-dans-mes-baskets-lepodcast/id1572062730" target="_blank">
+                    <div class="podcast">
+                        <!-- Icône pour les podcasts -->
+                        <img src="images/logo/logoLien/podcast.svg" alt="podcast">
+                        <p>Podcast</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers les podcasts ZCAST -->
+            <button class="boutonLien" aria-label="Lien vers mes podcasts ZCAST" title="Lien vers mes podcasts ZCAST" tabindex="16">
+                <a href="https://anchor.fm/zoubeir-haffez" target="_blank">
+                    <div class="zcast">
+                        <p>ZCAST - Le Podcast</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers Substack -->
+            <button class="boutonLien" aria-label="Lien vers mon substack" title="Lien vers mon substack" tabindex="17">
+                <a href="https://zoubeir.substack.com/" target="_blank">
+                    <div class="substack">
+                        <!-- Icône pour Substack -->
+                        <img src="images/logo/logoLien/substack.svg" alt="substack">
+                        <p>Substack</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers Clubhouse -->
+            <button class="boutonLien" aria-label="Lien vers mon clubhouse" title="Lien vers mon clubhouse" tabindex="18">
+                <a href="https://www.clubhouse.com/@zoubeir.h" target="_blank">
+                    <div class="clubhouse">
+                        <!-- Icône pour Clubhouse -->
+                        <img src="images/logo/logoLien/clubhouse.svg" alt="clubhouse">
+                        <p>Clubhouse</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton Le digital pour tous -->
+            <button class="boutonLien" aria-label="Le digital pour tous" title="Le digital pour tous" tabindex="19">
+                <a href="https://ledigitalpourtous.fr/author/zoubeirh/" target="_blank">
+                    <div class="digital">
+                        <p>Le digital pour tous</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers GitHub -->
+
+            <button class="boutonLien" aria-label="Lien vers mon Github" title="Lien vers mon Github" tabindex="20">
+                <a href="https://github.com/zoub-a11y" target="_blank">
+                    <div class="github">
+                        <!-- Icône pour GitHub -->
+                        <img src="images/logo/logoLien/github.svg" alt="github">
+                        <p>Github</p>
+                    </div>
+                </a>
+            </button>
+
+            <!-- Bouton vers Uncut Network -->
+
+            <button class="boutonLien" aria-label="Lien vers mon Uncut" title="Uncut Network" tabindex="21">
+                <a href="https://uncut.network/user/4294970274" target="_blank">
+                    <div class="uncut">
+                        <img src="images/logo/logoLien/uncut.svg" alt="uncut">
+                        <p>Uncut Network</p>
+                    </div>
+                </a>
+            </button>
+
+        </div>
+
+        <!-- Fin des boutons pour les liens -->
+
+        <!-- Bouton haut de page -->
+        <div class="boutonHautPage" onclick="topFunction()" aria-label="Revenir en haut de la page" title="Bouton pour revenir en haut de page" tabindex="22">
+            <!-- Icône pour le bouton haut de page -->
+            <img src="images/boutonHautPage/boutonHautLight.svg" alt="haut de page">
+        </div>
+        <!-- Fin bouton haut de page -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- Liens du footer -->
+        <div class="listeFooter">
+            <a href="#" aria-label="Conditions générales d'utilisation" title="Conditions générales d'utilisation" tabindex="23">CGU</a>
+            <a href="#" aria-label="En savoir plus sur l'accessibilité" title="En savoir plus sur l'accessibilité" tabindex="24">Accessibilité</a>
+            <a href="contact.html" aria-label="Me contacter" title="Lien vers un formulaire de contact" tabindex="25">Me contacter</a>
+        </div>
+
+        <!-- Mention légale -->
+        <div class="copyright">
+            <p aria-label="Mention Légales et Droit d'auteur" title="Mentions légales et droit d'auteur" tabindex="26">Mentions légales | &copy; Copyright 2023
+            </p>
+        </div>
+    </footer>
+    <!-- Lien vers le fichier JS -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>

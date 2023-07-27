@@ -1,240 +1,114 @@
-window.onload = (event) => {
-  // concerne le site
-  const currentUrl = window.location.href;
-  const title = document.title;
-  const resume = document.querySelector(
-    ".presentation-contenu-col1 h2"
-  ).innerHTML;
+// Pour le Bouton Darkmode Lightmode
 
-  // concerne Modale de partage
-  const btnShare = document.querySelector(".btnShare");
-  const closeBtn = document.querySelector(".closeModal");
-  const modalSocial = document.querySelector(".modalSocial");
-  const modalContent = document.querySelector(".modal-content");
-  const facebookShare = document.querySelector(".modal-content .facebook");
-  const twitterShare = document.querySelector(".modal-content .twitter");
-  const linkedInShare = document.querySelector(".modal-content .linkedin");
-  const copyDiv = document.querySelector(".copyDiv");
-  const copyButton = document.querySelector(".copyButton");
+const themeSwitch = document.getElementById('themeSwitch');
+const body = document.body;
 
-  // concerne boutons réseaux sociaux
-  const linkedInBtn = document.querySelector(".Linkedin");
-  const linkedInName = "zoubeirhaffez";
-  const fbBtn = document.querySelector(".Facebook");
-  const fbName = "zoubeir.haffez";
-  const instaBtn = document.querySelector(".Insta");
-  const instaName = "zoubeir.haffez";
-  const twitterBtn = document.querySelector(".Twitter");
-  const twitterName = "ZoubeirH";
-
-  // concerne dark mode
-  const toggleDarkMode = document.querySelector("#toggle-dark-mode");
-  const switchDarkMode = document.querySelector(".switch");
-
-  // concerne bouton ajout aux favoris
-  const btnFav = document.querySelector(".btnFav");
-
-  // concerne le header
-  const btnHaut = document.querySelector(".btnHaut");
-
-  // concerne le résumé et l'image
-  const titleLinktree = document.querySelector(".presentation-title h1");
-  const presentation = document.querySelector(".presentation");
-
-  window.addEventListener("scroll", (e) => {
-    var btn = document.getElementById("btn");
-    if (window.scrollY > 200) {
-      btn.classList.add("visible");
+themeSwitch.addEventListener('change', function () {
+    if (themeSwitch.checked) {
+        body.classList.add('dark-mode');
     } else {
-      btn.classList.remove("visible");
+        body.classList.remove('dark-mode');
     }
-  });
+});
 
-  // Définit une variable pour stocker l'état du mode sombre (actif ou inactif)
-  let darkModeEnabled = false;
+// pour ajouter le site aux favoris
 
-  // Ajoute un gestionnaire d'événement au clic sur l'élément de commutateur
-  toggleDarkMode.addEventListener("click", function () {
-    // Inverse l'état du mode sombre
-    darkModeEnabled = !darkModeEnabled;
-
-    // Applique le mode sombre ou le mode clair en fonction de l'état du mode sombre
-    if (darkModeEnabled) {
-      document.body.classList.add("dark-mode");
-      titleLinktree.style.color = "white";
-      switchDarkMode.setAttribute("aria-label", "Désactiver le mode sombre");
-      switchDarkMode.setAttribute("title", "Désactiver le mode sombre");
-      btnHaut.classList.add("dark-mode-btnHaut");
-      presentation.classList.add("dark-mode-presentation");
-      toggleDarkMode.setAttribute("aria-pressed", "true");
+function favoris() {
+    if (navigator.appName != 'Microsoft Internet Explorer') {
+        window.alert("Presser Ctrl+D pour ajouter aux favoris");
     } else {
-      document.body.classList.remove("dark-mode");
-      titleLinktree.style.color = "inherit";
-      switchDarkMode.setAttribute("aria-label", "Activer le mode sombre");
-      switchDarkMode.setAttribute("title", "Activer le mode sombre");
-      btnHaut.classList.remove("dark-mode-btnHaut");
-      presentation.classList.remove("dark-mode-presentation");
-      toggleDarkMode.setAttribute("aria-pressed", "false");
+        window.external.AddFavorite("https://www.example.fr", "example.com");
     }
-  });
+}
 
-  // Ouvrir la modale à l'aide du bouton ".btnShare"
-  btnShare.addEventListener("click", function () {
-    if (darkModeEnabled) {
-      modalSocial.style.display = "block";
-      closeBtn.classList.add("closeDarkModal");
-      modalSocial.classList.add("modalSocialDarkMode");
-      modalContent.classList.add("modal-content-dark-mode");
-      copyDiv.classList.add("copyDivDarkMode");
-      copyButton.classList.add("copyButtonDarkMode");
+
+// Javascript pour la fonction de copier coller ou partager le lien du site.
+function shareOrCopyLink() {
+    const lien = document.getElementById('lien').href;
+    const zoneTexte = document.getElementById('zone-texte');
+
+    // Vérifier si l'API Web Share est prise en charge par le navigateur
+    if (navigator.share) {
+        // Partager le lien via l'API Web Share
+        navigator.share({
+                title: 'Linktree Zoubeir Haffez',
+                text: 'Site pour acceder aux différents réseaux de Zoubeir Haffez',
+                url: lien
+            })
+            .then(() => console.log('Lien partagé avec succès !'))
+            .catch((error) => {
+                console.error('Erreur lors du partage :', error);
+                // En cas d'erreur, copier le lien dans le presse-papier
+                copyLinkToClipboard(lien);
+            });
     } else {
-      modalSocial.style.display = "block";
-      closeBtn.classList.remove("closeDarkModal");
-      modalSocial.classList.remove("modalSocialDarkMode");
-      modalContent.classList.remove("modal-content-dark-mode");
-      copyDiv.classList.remove("copyDivDarkMode");
-      copyButton.classList.remove("copyButtonDarkMode");
+        // Si l'API Web Share n'est pas prise en charge, copier le lien directement
+        copyLinkToClipboard(lien);
     }
-  });
+}
 
-  // fermer la modale quand l'utilisateur clique en dehors
-  window.addEventListener("click", function (event) {
-    if (event.target == modalSocial) {
-      modalSocial.style.display = "none";
+function copyLinkToClipboard(link) {
+    const zoneTexte = document.getElementById('zone-texte');
+
+    // Placer le lien dans la zone de texte
+    zoneTexte.value = link;
+    zoneTexte.select();
+
+    try {
+        // Copier le texte sélectionné
+        const resultat = document.execCommand('copy');
+        if (resultat) {
+            alert("Le lien a été copié avec succès !");
+        } else {
+            alert("La copie du lien a échoué. Veuillez le copier manuellement.");
+        }
+    } catch (err) {
+        alert("Une erreur est survenue lors de la copie du lien : " + err);
     }
-  });
+}
 
-  // fermer la modale lorsque l'utilisateur clique sur la croix
-  closeBtn.addEventListener("click", function () {
-    modalSocial.style.display = "none";
-  });
 
-// Ajout favoris desktop & mobile
-  btnFav.addEventListener("click", () => {
-    // Récupération de l'URL de la page courante et du titre
-    var currentUrl = window.location.href;
-    var title = document.title;
-  
-    if (navigator.userAgent.indexOf('Mac') > 0) {
-      // Ajout de la page aux favoris en utilisant la fonction natif addBookmark
-      window.external.AddFavorite(currentUrl, title);
-    } else if (navigator.userAgent.indexOf('Mobile') > 0) {
-      // Ajout de la page aux favoris en utilisant la fonction natif addToHomeScreen
-      window.addToHomeScreen({
-        title: 'Ajout aux favoris', // Titre de la notification
-        autostart: false, // Ne pas afficher automatiquement la notification
-        return_to: currentUrl // Retour à l'URL de la page courante après l'ajout aux favoris
-      });
-    } else if (window.sidebar && window.sidebar.addPanel) {
-      // Pour les navigateurs anciens, tels que Firefox
-      window.sidebar.addPanel(title, currentUrl, "");
-    } else if (window.external && "AddFavorite" in window.external) {
-      // Pour Internet Explorer
-      window.external.AddFavorite(currentUrl, title);
-    } else {
-      // Pour les autres navigateurs
-      alert(
-        "Votre navigateur ne prend pas en charge cette fonctionnalité. Utilisez le raccourci clavier Ctrl+D pour ajouter cette page aux favoris."
-      );
+// Bouton Haut de page
+
+// function topFunction() {
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+// }
+
+function topFunction() {
+    // Définissez la durée de l'animation (en millisecondes)
+    const duration = 200; // Vous pouvez ajuster cette valeur selon vos préférences
+
+    // Récupérez la position actuelle de défilement
+    const startScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // Calculez le déplacement total nécessaire pour atteindre le haut de la page
+    const distanceToTop = startScroll;
+
+    // Obtenez le temps de départ de l'animation
+    const startTime = performance.now();
+
+    // Créez une fonction d'animation récursive
+    function animateScroll(timestamp) {
+        const elapsedTime = timestamp - startTime;
+        const scrollStep = distanceToTop / duration;
+
+        // Calculez la nouvelle position de défilement pour cet instant
+        const newScrollPosition = startScroll - Math.min(scrollStep * elapsedTime, distanceToTop);
+
+        // Défilez vers la nouvelle position
+        document.documentElement.scrollTop = document.body.scrollTop = newScrollPosition;
+
+        // Vérifiez si l'animation doit se poursuivre
+        if (elapsedTime < duration) {
+            // Continuez l'animation en appelant requestAnimationFrame
+            requestAnimationFrame(animateScroll);
+        } else {
+            // L'animation est terminée, assurez-vous que la position finale est correcte
+            document.documentElement.scrollTop = document.body.scrollTop = 0;
+        }
     }
-  });
-  // btnFav.addEventListener("click", () => {
-  //   // Ajoute la page aux favoris
-  //   if (window.sidebar && window.sidebar.addPanel) {
-  //     // Pour les navigateurs anciens, tels que Firefox
-  //     window.sidebar.addPanel(title, currentUrl, "");
-  //   } else if (window.external && "AddFavorite" in window.external) {
-  //     // Pour Internet Explorer
-  //     window.external.AddFavorite(currentUrl, title);
-  //   } else {
-  //     // Pour les autres navigateurs
-  //     alert(
-  //       "Votre navigateur ne prend pas en charge cette fonctionnalité. Utilisez le raccourci clavier Ctrl+D pour ajouter cette page aux favoris."
-  //     );
-  //   }
-  // });
 
-  // Ajouter un gestionnaire d'événement pour copier l'adresse de la page lorsque le bouton est cliqué
-  copyButton.addEventListener("click", function () {
-    // Créer un élément de texte caché
-    var copyTextElement = document.createElement("textarea");
-    copyTextElement.style.position = "fixed";
-    copyTextElement.style.opacity = "0";
-    copyTextElement.value = currentUrl;
-    document.body.appendChild(copyTextElement);
-    // Modifie le contenu du bouton
-    copyButton.textContent = "Copié !";
-
-    // Ajoute la classe pour l'animation de fondu
-    copyButton.classList.add("fade-in");
-
-    // Enlève la classe "fade-in" une fois l'animation terminée
-    copyButton.addEventListener("animationend", () => {
-      copyButton.classList.remove("fade-in");
-    });
-
-    // Sélectionner le texte et copier dans le presse-papiers
-    copyTextElement.select();
-    document.execCommand("copy");
-
-    // Supprimer l'élément de texte caché
-    document.body.removeChild(copyTextElement);
-  });
-
-  // modification des liens
-  facebookShare.href =
-    "https://www.facebook.com/sharer/sharer.php?u=" + currentUrl + "";
-  twitterShare.href =
-    "https://twitter.com/intent/tweet?url=" +
-    currentUrl +
-    "&text=" +
-    title +
-    "&via=" +
-    twitterName +
-    "";
-  linkedInShare.href =
-    "https://www.linkedin.com/sharing/share-offsite/?url=" +
-    currentUrl +
-    "&title=" +
-    encodeURIComponent(title) +
-    "&summary=" +
-    encodeURIComponent(resume) +
-    "";
-
-  linkedInBtn.href = "https://www.linkedin.com/in/" + linkedInName + "/";
-  linkedInBtn.setAttribute(
-    "aria-label",
-    "Vers le LinkedIn de " + titleLinktree.innerHTML + ""
-  );
-  linkedInBtn.setAttribute(
-    "title",
-    "Vers le LinkedIn de " + titleLinktree.innerHTML + ""
-  );
-  fbBtn.href = "https://www.facebook.com/" + fbName + "";
-  fbBtn.setAttribute(
-    "aria-label",
-    "Vers le Facebook de " + titleLinktree.innerHTML + ""
-  );
-  fbBtn.setAttribute(
-    "title",
-    "Vers le Facebook de " + titleLinktree.innerHTML + ""
-  );
-  instaBtn.href = "https://www.instagram.com/" + instaName + "/";
-  instaBtn.setAttribute(
-    "aria-label",
-    "Vers l'Instagram de " + titleLinktree.innerHTML + ""
-  );
-  instaBtn.setAttribute(
-    "title",
-    "Vers l'Instagram de " + titleLinktree.innerHTML + ""
-  );
-  twitterBtn.href = "https://twitter.com/" + twitterName + "";
-  twitterBtn.setAttribute(
-    "aria-label",
-    "Vers le Twitter de " + titleLinktree.innerHTML + ""
-  );
-  twitterBtn.setAttribute(
-    "title",
-    "Vers le Twitter de " + titleLinktree.innerHTML + ""
-  );
-};
+    // Démarrez l'animation en appelant requestAnimationFrame pour la première fois
+    requestAnimationFrame(animateScroll);
+}

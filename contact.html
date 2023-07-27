@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="formulaire">
+
+    <form action="https://formspree.io/f/maygngrn" method="POST">
+
+        <h1 aria-label="Titre de la page" title="Formulaire de contact" tabindex="1">Formulaire de contact</h1>
+
+        <input tabindex="2" aria-label="Ecrivez votre nom" title="nom de famille" type="text" name="first" placeholder="Nom :" autocomplete="family-name" required>
+
+        <input tabindex="3" aria-label="Ecrivez votre prénom" title="prénom" type="text" name="last" placeholder="Prénom :" autocomplete="given-name" required>
+
+        <input tabindex="4" aria-label="Ecrivez votre adresse mail" title="Adresse mail afin d'être recontacté" type="email" name="email" placeholder="Email :" autocomplete="off" required>
+
+        <textarea tabindex="5" aria-label="Ecrivez votre message" title="Votre message :" rows="5" cols="60" name="message" placeholder="Entrez votre message :" autocomplete="off" required></textarea>
+
+        <button tabindex="7" aria-label="Envoyer le message à Zoubheir Haffez" title="Bouton envoyer" type="submit">Envoyer le message</button>
+
+    </form>
+
+    <div class="message" aria-label="Attention, la page ou vous serez redirigé, n'est surement pas accessible. Elle vous confirmera l'envoie du message et vous permettra de revenir à ce site avec un bouton." title="Message important" tabindex="6">
+        <p> <br>Attention, la page ou vous serez redirigé, n'est surement pas accessible. <br> <br> Elle vous confirmera l'envoie du message et vous permettra de revenir à ce site avec un bouton. <br></p>
+
+    </div>
+
+
+</body>
+
+</html>

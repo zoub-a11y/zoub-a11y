@@ -1,0 +1,733 @@
+/* CSS pour la page */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Raleway';
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+}
+
+/* CSS pour le header */
+
+header {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #BDD3E0;
+    padding-bottom: 30px;
+}
+
+/* CSS pour les boutons en haut à droite */
+
+
+.boutonHaut button img {
+    width: 60px;
+    height: auto;
+}
+
+.boutonHaut {
+    width: 300px;
+    height: auto;
+    left: 0px auto;
+    padding-left: 20px;
+}
+
+.contact,
+.favori,
+.partager {
+    margin: 10px;
+}
+
+.contact :hover {
+    content: url(images/logo/boutonRond/contactHover.svg);
+
+}
+
+.favori :hover {
+    content: url(images/logo/boutonRond/favoriHover.svg);
+
+}
+
+.partager :hover {
+    content: url(images/logo/boutonRond/partagerHover.svg);
+
+}
+
+/* CSS pour le titre */
+.nom {
+    width: auto 50%;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 80px;
+    margin: auto 0;
+    color: #1E2022;
+}
+
+/* CSS pour le bouton switch */
+
+.blocSwitch {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.switch {
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    right: 25px;
+}
+
+.switch input {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 0;
+    height: 0;
+}
+
+.switch input + span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1E2022;
+    border-radius: 20px;
+}
+
+.switch input + span:hover {
+    background: #575757;
+}
+
+.switch input:checked + span {
+    background: #F0F5F9;
+}
+
+.switch input + span:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 32px;
+    height: 32px;
+    background: #F0F5F9;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.switch input:checked + span:before {
+    left: 34px;
+    background: #1E2022;
+}
+
+/* FIN DU CSS HEADER */
+
+
+/* CSS pour la partie de présentation */
+
+.contenu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #BDD3E0;
+    padding-bottom: 70px;
+}
+
+
+/* CSS pour le paragraphe de présentation écite */
+.presentation {
+    margin-top: 50px;
+    margin-left: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.presentation h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1E2022;
+}
+
+/* espacement entre les paragraphes */
+.espacement {
+    height: 60px;
+}
+
+.presentation p {
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 35px;
+    color: #1E2022;
+
+}
+
+
+/* images zoubeir logo */
+.logoZoubeir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.logoZoubeir img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Bouton Reseaux sociaux */
+
+.boutonReseaux {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.boutonReseaux button img {
+    width: 80px;
+    height: auto;
+}
+
+
+.instagram,
+.twitter,
+.linkedin,
+.facebook {
+    width: 100px;
+    height: auto;
+    padding-top: 30px;
+
+}
+
+.instagram :hover {
+    content: url(images/logo/boutonReseau/instagramHover.svg);
+}
+
+.twitter :hover {
+    content: url(images/logo/boutonReseau/twitterHover.svg);
+}
+
+.linkedin :hover {
+    content: url(images/logo/boutonReseau/linkedinHover.svg);
+}
+
+.facebook :hover {
+    content: url(images/logo/boutonReseau/facebookHover.svg);
+}
+
+
+/* fin de la partie de présentation */
+
+/* CSS du sapin de noel  */
+
+.textePublication {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 60px;
+    width: 80% auto;
+}
+
+.textePublication h2 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* CSS des Boutons vers les différents lien */
+
+.blocBoutonLien {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+}
+
+.boutonLien {
+    width: 85%;
+    height: 100px;
+    background-color: #1E2022;
+    border-radius: 70px;
+}
+
+.youtube,
+.spotify,
+.podcast,
+.zcast,
+.substack,
+.clubhouse,
+.digital,
+.github,
+.uncut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    gap: 30px;
+    color: #F0F5F9;
+}
+
+.boutonLien:hover {
+    background-color: #445D76;
+}
+
+/* fin des boutons pour les liens en CSS */
+
+/* bouton Haut de page */
+
+.boutonHautPage {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 25px;
+    cursor: pointer;
+    padding-bottom: 25px;
+}
+
+.boutonHautPage img {
+    width: 70px;
+}
+
+.boutonHautPage img:hover {
+    content: url(images/boutonHautPage/boutonHautLightHover.svg);
+}
+
+/* Fin bouton haut de page  */
+
+.listeFooter {
+    background-color: #1E2022;
+    font-size: 30px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.listeFooter a {
+    position: relative;
+    color: #F0F5F9;
+    width: 200px;
+    text-decoration: none;
+
+
+}
+
+.listeFooter a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #F0F5F9;
+    transition: width 0.2s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.listeFooter a:hover::before {
+    width: 100%;
+
+}
+
+.copyright {
+    background-color: #1E2022;
+    color: #F0F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+/* CSS pour le darkmode */
+
+
+.dark-mode {
+    background-color: #24292C;
+    color: #F0F5F9;
+}
+
+.dark-mode header {
+    background-color: #363C41;
+    /* Change header background color */
+}
+
+.dark-mode .contenu {
+    background-color: #363C41;
+    /* Change .contenu background color */
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p {
+    color: #F0F5F9;
+    /* Change text color */
+}
+
+.dark-mode .boutonLien {
+    border: 2px solid #F0F5F9;
+}
+
+.dark-mode .boutonHautPage img {
+    content: url(images/boutonHautPage/boutonHautDark.svg);
+}
+
+.dark-mode .boutonHautPage img:hover {
+    content: url(images/boutonHautPage/boutonHautDarkHover.svg);
+}
+
+.dark-mode .switch input + span:hover {
+    background: #D0D3D5;
+}
+
+.dark-mode .boutonLien:hover {
+    background-color: #F0F5F9;
+    border: none;
+}
+
+.dark-mode .boutonLien:hover p {
+    color: #1E2022;
+}
+
+.dark-mode .boutonLien:hover .youtube img {
+    content: url(images/logo/logoLien/youtubeHover.svg);
+}
+
+.dark-mode .boutonLien:hover .spotify img {
+    content: url(images/logo/logoLien/spotifyHover.svg);
+}
+
+.dark-mode .boutonLien:hover .podcast img {
+    content: url(images/logo/logoLien/podcastHover.svg);
+}
+
+.dark-mode .boutonLien:hover .substack img {
+    content: url(images/logo/logoLien/substackHover.svg);
+}
+
+.dark-mode .boutonLien:hover .clubhouse img {
+    content: url(images/logo/logoLien/cluhouseHover.svg);
+}
+
+.dark-mode .boutonLien:hover .github img {
+    content: url(images/logo/logoLien/githubHover.svg);
+}
+
+.dark-mode .boutonLien:hover .uncut img {
+    content: url(images/logo/logoLien/uncutHover.svg);
+}
+
+
+
+
+
+/* CSS pour le responsive  */
+
+
+/*  responsive pour les ecrans inférieurs à 1319px */
+@media (max-width: 1319px) {
+
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .contenu {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .logoZoubeir {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .boutonReseaux {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        gap: 30px;
+    }
+
+    .presentation {
+        margin: 0 auto;
+        width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .presentation h2 {
+        font-size: 30px;
+    }
+
+
+    .presentation p {
+        font-size: 25px;
+    }
+
+
+
+    .textePublication {
+        text-align: center;
+
+    }
+
+    .textePublication h2 {
+        font-size: 40px;
+    }
+
+    .youtube,
+    .spotify,
+    .podcast,
+    .zcast,
+    .substack,
+    .clubhouse,
+    .digital,
+    .github {
+        font-size: 25px;
+    }
+
+    /* Responsive pour rendre compatible certains elements pour les ecrans inferieurs à 1100px */
+}
+
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .boutonHaut {
+        width: 25%;
+    }
+
+    .nom {
+        width: 50%;
+    }
+
+    .blocSwitch {
+        width: 25%;
+    }
+}
+
+/* responsive pour l'équivalent d'un écran de telephone */
+
+@media (max-width: 600px) {
+
+
+    .boutonReseaux {
+        width: 55px;
+    }
+
+    .boutonReseaux button img {
+        width: 55px;
+    }
+
+    .instagram,
+    .twitter,
+    .linkedin,
+    .facebook {
+        width: 55px;
+
+
+    }
+
+    .switch {
+        right: 5px;
+    }
+
+    .textePublication h2 {
+        font-size: 25px;
+    }
+
+    .boutonHautPage {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .boutonHautPage img {
+        width: 50px;
+    }
+
+    .boutonLien {
+        width: 80%;
+        height: 80px;
+    }
+
+
+    .listeFooter a {
+        width: 100px;
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS pour le formulaire de contact */
+
+.formulaire {
+    background-color: #1E2022;
+}
+
+/*titre*/
+form h1 {
+    color: #F0F5F9;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+/***************/
+
+/*Bouton nom , prenom , email*/
+form input {
+    background-color: #868686;
+    width: 70%;
+    margin-left: 12%;
+    font-size: 20px;
+    padding: 30px 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: solid 2px #F0F5F9;
+    color: #F0F5F9;
+}
+
+form input::placeholder {
+    color: #F0F5F9;
+}
+
+/*********************************/
+
+/*Bouton Entrer le message */
+form textarea {
+    background-color: #868686;
+    width: 70%;
+    margin-left: 12%;
+    font-size: 20px;
+    padding: 130px 30px;
+    border-radius: 20px;
+    border-color: #1E2022;
+    border: solid 2px #F0F5F9;
+    color: #F0F5F9;
+}
+
+form input:focus-within {
+    outline: none;
+    border-width: 3px;
+}
+
+form textarea:focus-within {
+    outline: none;
+    border-width: 3px;
+}
+
+form textarea::placeholder {
+    color: #F0F5F9;
+}
+
+/*****************************/
+
+
+/*bouton envoyer le message*/
+
+form button {
+    background-color: #F0F5F9;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 20px 18px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+form button:hover {
+    opacity: 80%;
+    cursor: pointer;
+    background-color: #1E2022;
+    color: #F0F5F9;
+    border: solid 2px #F0F5F9;
+}
+
+/*****************************/
+
+/* CSS pour le message */
+
+.message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #868686;
+    border: solid 2px #F0F5F9;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 30px;
+    color: #F0F5F9;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+/* Fin du CSS pour le formulaire */
