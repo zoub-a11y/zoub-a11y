@@ -527,7 +527,8 @@ h1 {
 
     .listeFooter a {
         width: 100px;
-        font-size: 20px;
+        font-size: 18px;
+        width: 100%;
     }
 
 }
@@ -555,14 +556,16 @@ padding-bottom: 20px;
 
 .headerFormulaire .boutonAccueil{
     width: 300px;
-
+}
+.boutonAccueil img{
+    width: 80px;
 }
 
 .boutonAccueil:hover img{
     content:url(images/boutonAccueil/boutonAccueilHover.svg) ;
 }
 
-/*titre*/
+/*titre de la page formulaire*/
 .titreFormulaire {
     color: #1E2022;
     font-size: 50px;
@@ -578,7 +581,7 @@ form{
 }
 /***************/
 
-/*Bouton nom , prenom , email*/
+/*Zone pour entrer le nom , prenom , email*/
 form input {
     background-color: #F0F5F9;
     width: 70%;
@@ -597,12 +600,12 @@ form input::placeholder {
 
 /*********************************/
 
-/*Bouton Entrer le message */
+/*Zone pour Entrer le message */
 form textarea {
     background-color: #F0F5F9;
     width: 70%;
     font-size: 20px;
-    padding: 130px 30px;
+    padding: 30px 30px;
     border-radius: 20px;
     border-color: #1E2022;
     border: solid 2px #1E2022;
@@ -651,7 +654,7 @@ form button:hover {
 
 /*****************************/
 
-/* CSS pour le message */
+/* CSS pour le message d'avertissement */
 
 .message {
     text-align: center;
@@ -708,9 +711,41 @@ form button:hover {
 
 }
 
+/* FIn du darkmode pour le formulaire */
+
+/* Responsive du formulaire */
+/*  responsive pour les ecrans inférieurs à 1319px */
+@media (max-width: 1319px) {
+
+.headerFormulaire .boutonAccueil{
+    width: 100px;
+}
+.boutonAccueil img{
+    width: 70px;
+}
+
+.blocSwitch{
+    width: 100px;
+}
+}
+
+@media (max-width: 1100px) {
+
+}
+
+/* responsive pour l'équivalent d'un écran de telephone */
+
+@media (max-width: 600px) {
+.titreFormulaire{
+    font-size: 40px;
+}
+
+.boutonAccueil img{
+    width: 60px;
+}
+
+}
 
 
 
-
-
-/* Fin du CSS pour le formulaire */
+/* Fin du CSS pour la page formulaire */
