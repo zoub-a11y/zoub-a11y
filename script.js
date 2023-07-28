@@ -15,7 +15,7 @@ themeSwitch.addEventListener('change', function () {
 
 function favoris() {
     if (navigator.appName != 'Microsoft Internet Explorer') {
-        window.alert("Presser Ctrl+D pour ajouter aux favoris");
+        window.alert("Pour ajouter le site aux favoris, veuillez passer par votre navigateur");
     } else {
         window.external.AddFavorite("https://www.example.fr", "example.com");
     }
