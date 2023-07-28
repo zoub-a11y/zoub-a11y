@@ -302,6 +302,7 @@ h1 {
     color: #F0F5F9;
     width: 200px;
     text-decoration: none;
+    border: solid red 1px;
 }
 
 .listeFooter a::before {
@@ -527,7 +528,8 @@ h1 {
 
     .listeFooter a {
         width: 100px;
-        font-size: 20px;
+        font-size: 18px;
+        width: 100%;
     }
 
 }
@@ -555,7 +557,9 @@ padding-bottom: 20px;
 
 .headerFormulaire .boutonAccueil{
     width: 300px;
-
+}
+.boutonAccueil img{
+    width: 80px;
 }
 
 .boutonAccueil:hover img{
@@ -707,6 +711,42 @@ form button:hover {
     color: #1E2022;
 
 }
+
+/* FIn du darkmode pour le formulaire */
+
+/* Responsive du formulaire */
+/*  responsive pour les ecrans inférieurs à 1319px */
+@media (max-width: 1319px) {
+
+.headerFormulaire .boutonAccueil{
+    width: 100px;
+}
+.boutonAccueil img{
+    width: 70px;
+}
+
+.blocSwitch{
+    width: 100px;
+}
+}
+
+@media (max-width: 1100px) {
+
+}
+
+/* responsive pour l'équivalent d'un écran de telephone */
+
+@media (max-width: 600px) {
+.titreFormulaire{
+    font-size: 40px;
+}
+
+.boutonAccueil img{
+    width: 60px;
+}
+
+}
+
 
 
 /* Fin du CSS pour la page formulaire */
