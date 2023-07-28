@@ -556,8 +556,9 @@ h1 {
 /* Bouton Accueil */
 
 
-.headerFormulaire .boutonAccueil {
+.headerFormulaire a {
     width: 300px;
+    border: solid red 1px;
 }
 
 .boutonAccueil img {
