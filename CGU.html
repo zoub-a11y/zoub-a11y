@@ -2,16 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGU</title>
-</head>
+    <meta name="description" content="Site web Linktr.ee de Zoubeir Haffez - Page CHU">
+    <title>Linktree Zoubeir Haffez - CGU</title>
+    <link rel="shortcut icon" type="image/png" href="images/ZoubeirLogo.png">
+    <!-- Lien CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <body>
+    <div class="cgu">
+    <header class="headerCGU">
+
+    <a href="index.html">
+        <button class="boutonAccueil" tabindex="0" aria-label="Retour à la page d'accueil" title="Bouton Accueil">
+            <img src="images/boutonAccueil/boutonAccueil.svg" alt="Accueil">
+        </button>
+    </a>
+
+    <h1 class="titreCGU"> Conditions Générales D'utilisateurs </h1>
+
+    <div class="blocSwitch">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch" title="Passer du mode clair au mode sombre" aria-label="Passer du mode clair au mode sombre" tabindex="4" />
+            <span></span>
+        </label>
+    </div>
+
+</header>
+<main class="mainCGU">
     <!-- CGU (conditions générales d'utilisateurs) -->
-    <div class="Conditions">
-        <h1> Conditions Générales D'utilisateurs </h1>
-        <p>
+
         <p>Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part, ZoubeirH Haffez , ci-après dénommé l’EDITEUR, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.</p><br />
         <p>Toute connexion au site est subordonnée au respect des présentes conditions.</p><br />
         <p>Pour l’utilisateur, le simple accès au site de l’EDITEUR à l’adresse URL suivante ____ implique l’acceptation de l’ensemble des conditions décrites ci-après.</p><br />
@@ -76,8 +100,26 @@
 
         <h2>Droit applicable</h2>
         <!--TITRE-->
-        <p>Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.</p><br />
-    </div>
+        <p>Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.</p>
+    </main>
+        <!-- FOOTER -->
+        <footer>
+            <!-- Liens du footer -->
+            <div class="listeFooter">
+                <a href="CGU.html" aria-label="Conditions générales d'utilisation" title="Conditions générales d'utilisation" tabindex="23">CGU</a>
+                <a href="#" aria-label="En savoir plus sur l'accessibilité" title="En savoir plus sur l'accessibilité" tabindex="24">Accessibilité</a>
+                <a href="contact.html" aria-label="Me contacter" title="Lien vers un formulaire de contact" tabindex="25">Me contacter</a>
+            </div>
+    
+            <!-- Mention légale -->
+            <div class="copyright">
+                <p aria-label="Mention Légales et Droit d'auteur" title="Mentions légales et droit d'auteur" tabindex="26">
+                    Mentions légales | &copy; Copyright 2023 | Version 2.02
+                </p>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+</div>
 </body>
 
 </html>

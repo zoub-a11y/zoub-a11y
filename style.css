@@ -558,7 +558,6 @@ h1 {
 
 .headerFormulaire a {
     width: 300px;
-    border: solid red 1px;
 }
 
 .boutonAccueil img {
@@ -753,3 +752,45 @@ form button:hover {
 
 
 /* Fin du CSS pour la page formulaire */
+
+
+/* CSS pour la page CGU */
+.headerCGU{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px auto;
+    width: 90%;
+}
+
+.cgu{
+    background-color: #BDD3E0;
+}
+.titreCGU{
+    color: #1E2022;
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+.mainCGU{
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px;
+    color: #1E2022;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainCGU h3{
+    color: #1E2022;
+}
+
+/* CSS pour le darkmode */
+
+.dark-mode .cgu{
+    background-color: #363C41;
+    color: #F0F5F9;
+}
+
+.dark-mode .mainCGU h3{
+    color: #F0F5F9;
+}
