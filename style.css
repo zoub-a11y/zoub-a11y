@@ -302,7 +302,6 @@ h1 {
     color: #F0F5F9;
     width: 200px;
     text-decoration: none;
-    border: solid red 1px;
 }
 
 .listeFooter a::before {
