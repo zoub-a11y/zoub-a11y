@@ -562,7 +562,7 @@ padding-bottom: 20px;
     content:url(images/boutonAccueil/boutonAccueilHover.svg) ;
 }
 
-/*titre*/
+/*titre de la page formulaire*/
 .titreFormulaire {
     color: #1E2022;
     font-size: 50px;
@@ -578,7 +578,7 @@ form{
 }
 /***************/
 
-/*Bouton nom , prenom , email*/
+/*Zone pour entrer le nom , prenom , email*/
 form input {
     background-color: #F0F5F9;
     width: 70%;
@@ -597,7 +597,7 @@ form input::placeholder {
 
 /*********************************/
 
-/*Bouton Entrer le message */
+/*Zone pour Entrer le message */
 form textarea {
     background-color: #F0F5F9;
     width: 70%;
@@ -651,7 +651,7 @@ form button:hover {
 
 /*****************************/
 
-/* CSS pour le message */
+/* CSS pour le message d'avertissement */
 
 .message {
     text-align: center;
@@ -709,8 +709,4 @@ form button:hover {
 }
 
 
-
-
-
-
-/* Fin du CSS pour le formulaire */
+/* Fin du CSS pour la page formulaire */
