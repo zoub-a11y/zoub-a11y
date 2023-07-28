@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-  <g id="Favori" transform="translate(4.4 1227.55)">
-    <path id="Tracé_1" data-name="Tracé 1" d="M50,0A50,50,0,1,1,0,50,50,50,0,0,1,50,0Z" transform="translate(-4.4 -1227.55)" fill="#f0f5f9"/>
-    <path id="star-svgrepo-com" d="M73.486,37.746,48.208,34,36.613,11.23,25.24,34.114,0,38.1,18.249,55.992l-4,25.238L36.9,69.4,59.662,81.008l-4.25-25.2Z" transform="translate(8.857 -1223.78)" fill="#1e2022"/>
-  </g>
+    <g id="Favori" transform="translate(4.4 1227.55)">
+        <path id="Tracé_1" data-name="Tracé 1" d="M50,0A50,50,0,1,1,0,50,50,50,0,0,1,50,0Z" transform="translate(-4.4 -1227.55)" fill="#f0f5f9" />
+        <path id="star-svgrepo-com" d="M73.486,37.746,48.208,34,36.613,11.23,25.24,34.114,0,38.1,18.249,55.992l-4,25.238L36.9,69.4,59.662,81.008l-4.25-25.2Z" transform="translate(8.857 -1223.78)" fill="#1e2022" />
+    </g>
 </svg>

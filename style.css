@@ -21,7 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: calc(100% - 40px);
-    background-color: #BDD3E0; 
+    background-color: #BDD3E0;
 }
 
 /* CSS pour les boutons en haut à droite */
@@ -482,7 +482,7 @@ h1 {
         width: 25%;
     }
 
-    .boutonLien img{
+    .boutonLien img {
         width: 40px;
         height: auto;
     }
@@ -532,6 +532,7 @@ h1 {
     }
 
 }
+
 /*Fin du CSS de la page d'acceuil*/
 
 
@@ -543,26 +544,28 @@ h1 {
 }
 
 
-.headerFormulaire{
-display: flex;
-padding-top: 30px;
-text-align: center;
-align-items: center;
-padding-bottom: 20px;
+.headerFormulaire {
+    display: flex;
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
 
 }
+
 /* Bouton Accueil */
 
 
-.headerFormulaire .boutonAccueil{
+.headerFormulaire .boutonAccueil {
     width: 300px;
 }
-.boutonAccueil img{
+
+.boutonAccueil img {
     width: 80px;
 }
 
-.boutonAccueil:hover img{
-    content:url(images/boutonAccueil/boutonAccueilHover.svg) ;
+.boutonAccueil:hover img {
+    content: url(images/boutonAccueil/boutonAccueilHover.svg);
 }
 
 /*titre de la page formulaire*/
@@ -574,11 +577,12 @@ padding-bottom: 20px;
     width: 50%;
 }
 
-form{
+form {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 /***************/
 
 /*Zone pour entrer le nom , prenom , email*/
@@ -610,7 +614,7 @@ form textarea {
     border-color: #1E2022;
     border: solid 2px #1E2022;
     color: #1E2022;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
 form input:focus-within {
@@ -669,43 +673,43 @@ form button:hover {
 
 /* CSS pour le darkmode du formulaire */
 
-.dark-mode .formulaire{
+.dark-mode .formulaire {
     background-color: #363C41;
 }
 
 
 
-.dark-mode .message{
+.dark-mode .message {
     color: #F0F5F9;
 }
 
-.dark-mode form input{
+.dark-mode form input {
     background-color: #1E2022;
     border: solid 2px #F0F5F9;
     color: #F0F5F9;
 }
 
-.dark-mode form textarea{
+.dark-mode form textarea {
     background-color: #1E2022;
     border: solid 2px #F0F5F9;
     color: #F0F5F9;
 }
 
-.dark-mode form input::placeholder{
+.dark-mode form input::placeholder {
     color: #F0F5F9;
 }
 
-.dark-mode form textarea::placeholder{
+.dark-mode form textarea::placeholder {
     color: #F0F5F9;
 }
 
-.dark-mode form button{
+.dark-mode form button {
     background-color: #1E2022;
     border: #F0F5F9 solid 2px;
     color: #F0F5F9;
 }
 
-.dark-mode form button:hover{
+.dark-mode form button:hover {
     background-color: #F0F5F9;
     color: #1E2022;
 
@@ -717,32 +721,31 @@ form button:hover {
 /*  responsive pour les ecrans inférieurs à 1319px */
 @media (max-width: 1319px) {
 
-.headerFormulaire .boutonAccueil{
-    width: 100px;
-}
-.boutonAccueil img{
-    width: 70px;
+    .headerFormulaire .boutonAccueil {
+        width: 100px;
+    }
+
+    .boutonAccueil img {
+        width: 70px;
+    }
+
+    .blocSwitch {
+        width: 100px;
+    }
 }
 
-.blocSwitch{
-    width: 100px;
-}
-}
-
-@media (max-width: 1100px) {
-
-}
+@media (max-width: 1100px) {}
 
 /* responsive pour l'équivalent d'un écran de telephone */
 
 @media (max-width: 600px) {
-.titreFormulaire{
-    font-size: 40px;
-}
+    .titreFormulaire {
+        font-size: 40px;
+    }
 
-.boutonAccueil img{
-    width: 60px;
-}
+    .boutonAccueil img {
+        width: 60px;
+    }
 
 }
 

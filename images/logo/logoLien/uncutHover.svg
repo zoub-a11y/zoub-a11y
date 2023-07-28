@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="35" viewBox="0 0 70 35">
-  <g id="Groupe_33" data-name="Groupe 33" transform="translate(7.741)">
-    <path id="Tracé_25" data-name="Tracé 25" d="M35,0V17.5a17.5,17.5,0,0,1-35,0V0H15.751V26.25a1.749,1.749,0,0,0,3.5,0V0Z" transform="translate(-7.741)" fill="#1e2022"/>
-    <path id="Tracé_26" data-name="Tracé 26" d="M62.259,35H44.765a17.5,17.5,0,1,1,0-35H62.259V15.751H36.011a1.749,1.749,0,1,0,0,3.5H62.259Z" fill="#1e2022"/>
-  </g>
+    <g id="Groupe_33" data-name="Groupe 33" transform="translate(7.741)">
+        <path id="Tracé_25" data-name="Tracé 25" d="M35,0V17.5a17.5,17.5,0,0,1-35,0V0H15.751V26.25a1.749,1.749,0,0,0,3.5,0V0Z" transform="translate(-7.741)" fill="#1e2022" />
+        <path id="Tracé_26" data-name="Tracé 26" d="M62.259,35H44.765a17.5,17.5,0,1,1,0-35H62.259V15.751H36.011a1.749,1.749,0,1,0,0,3.5H62.259Z" fill="#1e2022" />
+    </g>
 </svg>
