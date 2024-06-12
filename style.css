@@ -380,6 +380,10 @@ h1 {
     color: #1E2022;
 }
 
+.dark-mode .boutonLien:hover .google-forms img {
+    content: url(images/logo/logoLien/googleforms.svg);
+}
+
 .dark-mode .boutonLien:hover .youtube img {
     content: url(images/logo/logoLien/youtubeHover.svg);
 }
